@@ -12,23 +12,22 @@ CREATE TABLE book_laptop_family (
 /**书本**/
 CREATE TABLE book_laptop (
   lid INT PRIMARY KEY AUTO_INCREMENT,
+  book_name VARCHAR(32),          #商品名称
   family_id INT,              #所属型号家族编号
   title VARCHAR(128),         #主标题
   price DECIMAL(10,2),        #价格
   promise VARCHAR(64),        #服务承诺
   spec VARCHAR(64),           #规格/颜色
-  book_name VARCHAR(32),          #商品名称
   author VARCHAR(32),             #作者
   publishing VARCHAR(32),         #出版社
-  comment_count INT,          #分辨率
-  video_card INT,             #评论数量
+  comment_count INT,           #评论数量     
   laptop_count INT,           #商品数量
   content_introduction VARCHAR(1000),   #内容简介
   author_introduction VARCHAR(1000),       #作者简介
   catalogue_introduction VARCHAR(1000),     #目录简介
   lg_pic VARCHAR(128),      #商品大图
   sm_pic VARCHAR(128),      #商品小图
-  inbetweening VARCHAR(128),      #商品大图
+  inbetweening VARCHAR(128),      #商品插画
   shelf_time DATE,          #出版时间
   sold_count INT,             #已售出的数量
   is_onsale BOOLEAN,           #是否促销中

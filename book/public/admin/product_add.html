@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>admin</title>
-  <link rel="stylesheet" href="boot/bootstrap.css">
-  <script src="boot/jquery.min.js"></script>
-  <script src="boot/popper.min.js"></script>
-  <script src="boot/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../boot/bootstrap.css">
+  <script src="../boot/jquery.min.js"></script>
+  <script src="../boot/popper.min.js"></script>
+  <script src="../boot/bootstrap.min.js"></script>
   <style>
-  body{
+  .col-2.bg-dark{
     color: #fff;
   }
   .my-h{
@@ -23,7 +23,7 @@
   <div class="container-fluid">
   <div class="row my-h">
     <div class="col-2 bg-dark ">
-      <h4>书城后台管理系统</h4>
+      <h4 class="mt-3">书城后台管理系统</h4>
       <div class="media rounded p-3">
         <img src="img/admin/user.png" alt="" class="w-25 rounded-circle mt-2 mr-3">
         <div class="body">
@@ -74,7 +74,7 @@
       </div>
     </div>
     <!-- 手风琴2 -->
-      <h6>内容管理</h6>
+      <h6 class="mt-5">内容管理</h6>
       <div id="parent2">
         <!-- card1 -->
         <div class="card">
@@ -107,11 +107,27 @@
          </div>
       </div>
       <!-- 左侧 -->
-    
-    <div class="col-10"></div>
+    <div class="col-10 bg-light">
+      <h2>添加新的图书商品</h2>
+      <p>　　图书名称:<input type="text" id="book_name" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75 d-inline-block w-75"></p>
+      <p>图书分类编号:<input type="text" id="family_id" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　　主标题:<input type="text" id="title" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　　　价格:<input type="text" id="price" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　服务承诺:<input type="text" id="promise" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　　　规格:<input type="text" id="spec" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　　　作者:<input type="text" id="author" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　　出版社:<input type="text" id="publishing" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　内容简介:<input type="text" id="content_introduction" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　作者简介:<input type="text" id="author_introduction" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　目录简介:<input type="text" id="catalogue_introduction" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　商品大图:<input type="text" id="lg_pic" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　商品小图:<input type="text" id="sm_pic" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　商品插画:<input type="text" id="inbetweening" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　　出版时间:<input type="text" id="shelf_time" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <p>　是否促销中:<input type="text" id="is_onsale" class="form-control d-inline-block w-75 ml-3 d-inline-block w-75"></p>
+      <button class="btn btn-outline-success">添加</button>
+    </div>
   </div>
-  
-
   <!-- -----------------------分割线----------------------- -->
   </div>
 </body>
