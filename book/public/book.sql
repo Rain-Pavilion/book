@@ -59,7 +59,7 @@ CREATE TABLE book_receiver_address (
   fixedphone VARCHAR(16),     #固定电话
   postcode CHAR(6),           #邮编
   tag VARCHAR(16),            #标签名
-  is_default BOOLEAN,          #是否为当前用户的默认收货地址
+  is_default BOOLEAN default 1,          #是否为当前用户的默认收货地址
   FOREIGN KEY (user_id) REFERENCES book_user(uid)
 );
 
