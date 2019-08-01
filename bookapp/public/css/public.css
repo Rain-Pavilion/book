@@ -1,0 +1,28 @@
+/* 清除a标签下划线 */
+a{
+  text-decoration:none;
+}
+/* 清除列表圆点 */
+li{
+  list-style-type:none;
+}
+/* 清除浮动 */
+.clearFloat:after{
+  content: '';
+  visibility: hidden;
+  display:block;
+  height: 0;
+  clear:both;
+}
+.clearFloat{
+  zoom:1;
+}
+/* 整体字体大小 */
+html,body{
+  font-size:14px;
+}
+/* 全局内外边距 */
+*{
+  margin: 0;
+  padding: 0;
+}
