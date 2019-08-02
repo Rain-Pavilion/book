@@ -7,4 +7,5 @@ var pool=mysql.createPool({
   database:'book',
   connectionLimit:20
 });
+Object.freeze(pool);
 module.exports=pool;

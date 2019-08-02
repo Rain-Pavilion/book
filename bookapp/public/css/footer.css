@@ -1,3 +1,6 @@
+.footer_body{
+  height: 418px;
+}
 .footer_pic{
   height: 78px;
   background-color: #fafafa;
@@ -34,6 +37,7 @@
 .footer_list{
   width: 920px;
   height: 140px;
+  border-bottom:1px solid #ebebeb;
   margin: 0 auto;
 }
 .footer_list a{
