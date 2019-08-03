@@ -1,5 +1,6 @@
 /* 清除a标签下划线 */
 a{
+  color: #000;
   text-decoration:none;
 }
 /* 清除列表圆点 */
@@ -29,9 +30,6 @@ html {
   margin: 0;
   padding: 0;
 }
-
-
-
 
 .my-container {
     width: 1200px;
