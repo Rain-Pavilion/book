@@ -6,8 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
 </head>
 <body>
+    <div class="header">
+        <iframe src="head.html" frameborder="0" class="header" scrolling="no"></iframe>
+    </div>
     <div class="center">
     <!-- 顶部广告开始 -->
      <div class="top_ad">
@@ -27,9 +36,13 @@
      </div>
      <!-- 面包屑导航结束 -->
      <!-- 图书详情开始了 -->
-    <div class="detail clearFloat">
+    <div class="detail clearFloat"> 
+        <!-- 详情页左 -->
     <div class="detail_left">
     </div>
+    <!-- 详情页左 -->
+
+    <!-- 详情页中 -->
      <div class="detail_center">
          <h1> <img src="img/detail/icon_ddzy.png" alt="">
          半小时漫画唐诗（漫画科普开创者二混子新作！全网粉丝700万！熟读唐诗三百首背后的故事，准确理解唐诗的原意、深意和诗意！）
@@ -50,21 +63,79 @@
           <div class="price clearFloat">
               <div class="price_drop">
                   <div class="price_drop1">
-                      <span>当当价</span>
+                      <span class="price_drop1_1">当当价</span>
                       <span><a href="#">降价通知</a></span>
-                      <span class="price_drop1_1">
+                      <span class="price_drop1_2">
                           <span>￥</span>
                           31.40
                       </span>
                   </div>
-                  <div class="price_drop2"></div>
+                  <div class="price_drop2">
+                      (6.3折)
+                  </div>
               </div>
-              <div class="pricr_Ebook"></div>
-              <div class="price_cost"></div>
-          </div>              
+              <div class="price_Ebook ">
+                  <span>电子书价</span>
+                  <div class="price_Ebook1">
+                      <span>￥</span>
+                      <a href="#">11.99</a>
+                  </div>
+              </div>
+              <div class="price_cost">定价<s>￥49.90</s></div>
+              <div class="image"></div>
+          </div> 
+          <!-- 选择 -->
+           <div class="select clearFloat">
+          <div class="sales1">
+              <span class="sales1_1">促销</span>
+              <span class="sales1_2">电子书加购价</span>
+              <span class="sales1_3"><input type="text">+5.9元换购《半小时漫画唐诗 二混子新作》作者1:陈磊.半小时漫画团队</span>
+          </div>
+          <div class="sales2">
+              <span class="sales2_1">满N件折</span>
+              <span class="sales2_2">满3件打7折</span>
+              <span class="sales2_3">详情>></span>
+          </div>
+          <div class="sales3">
+              <span class=sales3_1>加购价</span>
+              <span class=sales3_2>购买本商品可加价换购以下任意一件商品</span>
+              <span class=sales3_3>收起^</span>
+          </div>
+          <div class="recommend  clearFloat">
+              <div class="recommend1 row mx-0">
+                  <div class="col-3">
+                  <img src="img/detail/recommend1.jpg" alt="">
+                </div>
+                <span class="col-9">
+                        如何成为一个抗压的人：宾夕法尼亚大学力荐的积极心理学课程
+                </span>
+              </div>
+              <div class="recommend2 row mx-0">
+                  <div class="col-3">
+                  <img src="img/detail/recommend2.jpg" alt="">
+                </div>
+                  <span class="col-9">
+                        生活需要孤独感（生活需要仪式感，孤独，也是一种仪式，它可以
+                  </span>
+              </div>
+          </div>
+          <p>促销不可多选，请在购物车选择该单品能享受的促销</p>
+           </div> 
+           <!-- 地址 购物车 -->
+             <div class="shopcar clearFloat">
+     
+             </div>        
      </div>
+  <!-- 详情页中 -->
+
+  <!-- 详情页右 -->
+    <div class="detail_right"></div>
+    <!-- 详情页右 -->
     </div>
     <!-- 图书详情结束了 -->
+    </div>
+    <div class="footer">
+    <iframe src="footer.html" frameborder="0" class="footer" scrolling="no"></iframe>
     </div>
 </body>
 </html>
