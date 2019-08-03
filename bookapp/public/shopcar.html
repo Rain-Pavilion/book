@@ -6,43 +6,111 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/shopcar.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-
+<div class="service-section w960">
+    <img src="img/sprite/dd_logo.jpg" alt="">
+    <div class="process-area">
+        <span class="service-process" style="color: #ffffff;">我的购物车</span>
+        <span class="service-process">填写订单</span>
+        <span class="service-process">完成订单</span>
+    </div>
+</div>
+<div class="w960 shop-car-content-area">
+    <p>您的购物车还是空的，您可以：</p>
+    <a href="" class="tab-button">
+        立即登陆
+    </a>
+    <span class="info">登录后购物车的商品将保存到您的账号中，或者去 <a href="/index.html">逛逛</a></span>
+</div>
 <div class="show-product w960">
     <div class="title">
         为你推荐
         <ul class="tab-button">
             <li>
-
             </li>
             <li>
-
             </li>
             <li>
-
             </li>
             <li>
-
             </li>
             <li>
+            </li>
+        </ul>
+    </div>
+    <div class="block-product">
+        <ul class="product-group" id="recommand">
+        </ul>
+    </div>
+</div>
 
+
+<div class="show-product w960">
+    <div class="title">
+        最近浏览
+        <ul class="tab-button">
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
             </li>
         </ul>
     </div>
     <div class="block-product">
         <ul class="product-group">
-            <li>
-                <a href="">
-                    <img src="./img/sprite/25137790-1_b_4.jpg" alt="">
-                    <p class="text"><a href="">活着（2017年新版）</a></p>
-                    <span class="price">¥21.60</span>
-                    <a href="" class="cover">加入购物车</a>
-                    <a class='info'>已有<span class="comment_num">2448200</span>位用户评</a>
-                </a>
-            </li>
         </ul>
     </div>
 </div>
+
+
+<div class="show-product w960">
+    <div class="title">
+        推广商品
+        <ul class="tab-button">
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+        </ul>
+    </div>
+    <div class="block-product">
+        <ul class="product-group">
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    let url = 'http://127.0.0.1:8080/books/cquery?conditions=comment_count&num=10';
+    axios.get(url).then((function (response) {
+        let data = response.data;
+        let html = '';
+        for (let i = 0; i < data.length; i++) {
+            html += `<li>
+                <a href="/detail.html?lid=${data[i].lid}">
+                    <img src="${data[i].lg_pic}" alt="">
+                    <p class="text"><a href="">${data[i].book_name}</a></p>
+                    <span class="price">¥21.60</span>
+                    <a href="" class="cover">加入购物车</a>
+                    <a class='info'>已有<span class="comment_num">${data[i].comment_count}</span>位用户评</a>
+                </a>
+            </li>`
+        }
+        recommand.innerHTML = html;
+    }));
+</script>
 </body>
 </html>

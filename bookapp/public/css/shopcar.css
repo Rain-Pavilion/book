@@ -40,7 +40,7 @@
 .block-product .product-group {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
+    margin-right: -50px;
 }
 
 .block-product .product-group li {
@@ -85,6 +85,8 @@
 .block-product .product-group p.text {
     line-height: 14px;
     height: 28px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .block-product .product-group p.text a {
@@ -118,4 +120,53 @@
 
 .block-product .product-group .comment_num {
     color: #1A66B3;
+}
+
+.service-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-bottom: 3px solid #ff2832;
+}
+
+.service-section .process-area {
+    width: 634px;
+    height: 36px;
+    line-height: 36px;
+    background-image: url("../img/sprite/procedure_bg.png");
+
+}
+
+.service-section .process-area .service-process {
+    height: 36px;
+    line-height: 36px;
+    width: 206px;
+    font-size: 14px;
+    text-align: center;
+    color: #646464;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.shop-car-content-area {
+    height: 280px;
+    background-image: url("../img/sprite/empty.png");
+    background-repeat: no-repeat;
+    background-position: 96px 46px;
+    box-sizing: border-box;
+    padding: 90px 0 0 496px;
+}
+
+.shop-car-content-area .tab-button {
+    width: 116px;
+    height: 38px;
+    display: inline-block;
+    background-color: #ff2832;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+    font-size: 18px;
+    margin: 30px 20px 0 0;
+    border-radius: 2px;
 }
