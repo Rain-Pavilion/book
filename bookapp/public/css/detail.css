@@ -1,0 +1,109 @@
+.clearFloat:after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.clearFloat {
+    *zoom:1;
+}
+a{
+    text-decoration:none;
+}
+li{
+    list-style:none;
+}
+
+
+.center{
+    width: 1200px;
+    margin:0 auto;
+}
+.top_ad{
+    height: 65px;
+    box-shadow:0 1px 0 1px #DCDDDD;
+}
+.breadcurmb{
+    height: 32px;
+    padding-top:8px;
+    margin-bottom:8px;
+}
+.breadcurmb .breadcurmb_first{
+    color:#646464;
+    font-weight:bold;
+    
+}
+.breadcurmb a{
+    color:#646464; 
+    font-size:14px;
+}
+.breadcurmb span{
+    font-size:14px;
+}
+.breadcurmb .gt{
+    border:1px 6px 0;
+}
+/* 详情左 */
+.detail .detail_left{
+    width: 320px;
+    height: 410px;
+    background-color:red;
+    float:left;
+}
+/* 详情中 */
+.detail .detail_center{
+    float:left;
+    width: 624px;
+    font-size:9px;
+}
+.detail .detail_center h1{
+    margin-top:4px;
+}
+.detail .detail_center h2{
+    font-size:16px;
+    font-weight:lighter;
+    margin-top:6px;
+    line-height:25px;
+}
+.detail .detail_center h2 a{
+    color:#1A66B3;
+}
+.detail .bookdetail{
+    font-size:13px;
+    color:#646464;
+    border-top:1px solid #F5F5F5;
+    padding-top:3px;
+}
+.detail .bookdetail a{
+    color:#1A66B3; 
+}
+.detail_center .bookdetail span{
+    margin-right:25px;   
+}
+.detail_center .bookdetail .bookdetail2{
+    margin-top:5px;
+}
+.price{
+    height: 143px;
+    background-color: #FCFAF7;
+    margin-top:8px;
+}
+.price .price_drop{
+    width: 206px;
+    height: 64px;
+    float:left;
+}
+.price .price_drop .price_drop1{
+margin-top:9px;
+width: 100px;
+background-color: red;
+}
+.price .price_drop .price_drop1 a{
+    margin-left:10px;
+    color:#1A66B3;
+}
+.price .price_drop 
+/* 详情中 */
+
+
