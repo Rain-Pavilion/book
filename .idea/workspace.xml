@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/bookapp/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookapp/public/css/shopcar.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/css/shopcar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookapp/public/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/routes/books.js" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/routes/books.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,12 +177,12 @@
       <workItem from="1564829726505" duration="6875000" />
       <workItem from="1564965211424" duration="2604000" />
       <workItem from="1564992306066" duration="10348000" />
-      <workItem from="1565011154064" duration="612000" />
+      <workItem from="1565011154064" duration="1126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42126000" />
+    <option name="totallyTimeSpent" value="42640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1294" height="934" extended-state="6" />
