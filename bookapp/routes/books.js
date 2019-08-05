@@ -1,7 +1,6 @@
 var express = require('express');
 const pool = require('./pool.js');
 const router = express.Router();
-
 /* GET users listing. */
 router.get('/query', function (req, res, next) {
     let lid = req.query.lid,
