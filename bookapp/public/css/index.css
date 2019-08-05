@@ -1,6 +1,6 @@
 .top {
   width: 1200px;
-  height: 996px;
+  height: 976px;
   margin: 0 auto;
 }
 .top>div{
@@ -184,7 +184,11 @@ div.container {
 }
 #top_middle_title span:last-child{
   margin-right: 10px;
+  font-weight: normal;
   color: #aaaaaa;
+}
+#top_middle_title p:last-child span:last-child{
+  font-size: 12px;
 }
 /* ----- */
 .top_right .top_list h5{
