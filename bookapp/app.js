@@ -36,7 +36,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.send(`<h1 style="color: red;">${err}</h1>`);
+  res.sendFile(path.join(__dirname,'public','404.html'));
 });
 
 module.exports = app;

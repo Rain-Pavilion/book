@@ -159,9 +159,9 @@
 }
 
 .shop-car-content-area .tab-button {
-    width: 116px;
     height: 38px;
     display: inline-block;
+    padding: 0 20px;
     background-color: #ff2832;
     color: #fff;
     text-align: center;
