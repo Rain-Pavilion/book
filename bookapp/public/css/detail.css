@@ -56,6 +56,7 @@ li{
     float:left;
     width: 624px;
     font-size:9px;
+    
 }
 .detail .detail_center h1{
     margin-top:4px;
@@ -259,11 +260,64 @@ font-size:15px;
 }
 /* 地址和购物车 */
 .shopcar{
-    height: 240px;
-    background-color: purple;
+    width: 567px;
+    position: absolute;
+    right:0;
+}
+.shopcar a{
+    display:inline-block;
+    font:16px "Microsoft Yahei";
+    color:white;
+    height: 36px;
+    border-radius:3px;
+    margin:0 4px 0;
+}
+.shopcar .shopcar_link1{
+    background-color: #FF2832;
+    padding:0 15px 0;
+    line-height:36px;
+}
+.shopcar .shopcar_link2,.shopcar .shopcar_link3{
+    padding:0 15px 0;
+    line-height:36px;
+}
+.shopcar .shopcar_link2{
+    background-color: #FFEDEE;
+    border:1px solid red;
+    color:red;
+}
+.shopcar .shopcar_link3{
+    background-color: #1B82DA;
+}
+.shopcar_father{
     position: relative;
+     height: 37px;
+     margin-top:38px;
+}
+.shopcar .shopcar_link1:hover{
+    color:white;
+    text-decoration:none;
+    background-color: red;
+}
+.shopcar .shopcar_link2:hover{
+    color:red;
+    text-decoration:none;
+    background-color: rgb(247, 215, 217);
+}
+.shopcar .shopcar_link3:hover{
+    color:white;
+    text-decoration:none;
+    background-color:rgb(14, 105, 185);
+}
+/* 详情中 */
+
+/* 详情右 */
+.detail_right{
+    float:right;
+    width: 180px;
+    background-color: rgb(14, 105, 185);
 }
 
-/* 详情中 */
+
 
 
