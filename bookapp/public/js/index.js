@@ -12,8 +12,9 @@ axios.get(url).then((function (response) {
       </div>
         `;
     new_book.innerHTML = html1;
+    // html1
     let html2 = '';
-    for(var i=9;i<=16;i++){
+    for(var i=0;i<=7;i++){
         html2 += `
           <div class="laptop">
           <a href="/detail.html?lid=${data[i].lid}"><img src="${data[i].lg_pic}" alt=""></a>
@@ -25,4 +26,18 @@ axios.get(url).then((function (response) {
         `; 
     }
     top_middle_title.innerHTML = html2;
+    // html3
+    let html_middle=``;
+    for(var i=8;i<=18;i++){
+      html_middle+=`
+      <div class="laptop">
+          <a href="/detail.html?lid=${data[i].lid}"><img src="${data[i].lg_pic}" alt=""></a>
+          <p class="name"><a href="/detail.html?lid=${data[i].lid}" title="${data[i].book_name}">${data[i].book_name}</a></p>
+          <p class="author" title="}">${data[i].author}</p>
+          <p class="time"><span>${data[i].shelf_time}</span></p>
+          <p class="price"><span>￥${data[i].price}</span><span><del>￥${parseInt(data[i].price*1.2)}</del></span></p> 
+        </div>
+        `;
+        new_laptop.innerHTML=html_middle;
+    }
 }));
