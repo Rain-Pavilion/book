@@ -11,12 +11,14 @@ div{
 }
 
 .img_1{
-    border: 1px solid #666;
+    border: 1px solid rgb(218, 209, 209);
     width:25rem;height:25rem;
 }
  .my_bg_image{
-     /* position: relative; */
+     position: absolute;
      width: 32rem;
+     margin-left: 0em;
+     /* border: 1px solid #000; */
  }
 
 .my_p1{
@@ -24,8 +26,8 @@ div{
     color:#000;
     font-size:16px;
     font-weight: bold;
-    /* position: absolute; */
-    padding:17px 0px 0px 49px;
+    position: relative;
+    margin:17px 0px 0px 49px;
 
 }
 .my_img1, .my_img2{
@@ -38,6 +40,9 @@ div{
 .my_c{
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
 
 }
-
+.my_img2{
+    padding-top: 25px;
+}
