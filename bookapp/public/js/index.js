@@ -26,6 +26,49 @@ axios.get(url).then((function (response) {
         `; 
     }
     top_middle_title.innerHTML = html2;
+    //middle_laptop1
+    let html_laptop1=``;
+    for(var i=1;i<=2;i++){
+    html_laptop1+=`
+    <div class="middle">
+    <div class="banner">
+    <img src="img/index/banner1.jpg" alt="">
+    <img src="img/index/banner2.jpg" alt="">
+    <img src="img/index/banner3.jpg" alt="">
+  </div>
+  <div class="top_middle_title clearFloat">
+      <span>新</span><p>书上架 <a href="">更多新书戳这里</a></p>
+    </div>
+    <div class="middle_right_title clearFloat">
+      <div class="sprite_icon"></div><a href="">新书热卖</a>
+    </div>
+  
+  <div class="middle_laptop">
+      <div class="new_laptop">
+      
+      </div>
+              
+  </div>
+  <div class="middle_list">
+    <ul>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+  </div>
+
+  </div>
+    `;
+  }
+  middle_laptop1.innerHTML=html_laptop1;
     // html3
     let html_middle=``;
     for(var i=8;i<=18;i++){
@@ -38,6 +81,10 @@ axios.get(url).then((function (response) {
           <p class="price"><span>￥${data[i].price}</span><span><del>￥${parseInt(data[i].price*1.2)}</del></span></p> 
         </div>
         `;
-        new_laptop.innerHTML=html_middle;
+       
+    }
+    let laptop=document.querySelectorAll(".new_laptop");
+    for(let i in laptop){
+        laptop[i].innerHTML=html_middle
     }
 }));
