@@ -1,8 +1,4 @@
-/* img{
-    width:1200px;
-    
-} */
-div{
+.c1{
     text-align: center;
 }
 .my_footer{
@@ -12,17 +8,14 @@ div{
 
 .img_1{
     border: 1px solid rgb(218, 209, 209);
-    width:25rem;height:25rem;
+    width:33rem;height:33rem;
 }
  .my_bg_image{
      position: absolute;
-     width: 32rem;
-     margin-left: 0em;
-     /* border: 1px solid #000; */
+     width: 41rem;
  }
-
 .my_p1{
-    width:21rem;height:3rem;
+    width:28rem;
     color:#000;
     font-size:16px;
     font-weight: bold;
@@ -31,7 +24,6 @@ div{
 
 }
 .my_img1, .my_img2{
-    float: left;
     padding-top:25px;
 }
 .my_img1{
@@ -43,6 +35,35 @@ div{
     margin-bottom: 2rem;
 
 }
-.my_img2{
-    padding-top: 25px;
+.price1{
+    position: absolute;
+    padding-top:5rem;
+    padding-left:5rem;
+    color: #fff;
+    width:460px;height:66px;
+    font-size:24px;
+}
+.price1 span{
+    font-size:36px;
+}
+.price1 a{
+    width:6rem;height:3rem;
+    padding-left: 5rem;
+}
+.price2{
+    position: absolute;
+    margin:10rem 0 0 4rem;
+    width: 417px;height:42px;
+    background-color: #bce9ff;
+    padding-left: 15px;
+    color: #404040;
+    font-size: 12px;
+}
+.price2_1{
+    width: 108px;
+    float: left;
+}
+.price3{
+    padding-top:12px;
+    display: block;
 }
