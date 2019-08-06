@@ -17,7 +17,7 @@ axios.get(url).then((function (response) {
         html2 += `
           <div class="laptop">
           <a href="/detail.html?lid=${data[i].lid}"><img src="${data[i].lg_pic}" alt=""></a>
-          <p><a href="/detail.html" title="${data[i].book_name}">${data[i].book_name}</a></p>
+          <p><a href="/detail.html?lid=${data[i].lid}" title="${data[i].book_name}">${data[i].book_name}</a></p>
           <p title="${data[i].publishing}">${data[i].publishing}</p>
           <p><span>￥${data[i].price}</span><span><del>￥${parseInt(data[i].price*1.2)}</del></span></p>
           <p><span>电子书￥${parseInt(data[i].price*0.5)}</span></p>
