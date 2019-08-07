@@ -301,14 +301,16 @@ div.container {
 }
 .middle .middle_laptop {
   width: 920px ;
-  height: 592px ;
+  /* height: 592px ; */
+  margin-bottom: 20px;
   float: left;
   border: 1px solid #ddd; 
 }
 .middle .middle_list{
   width: 240px ;
   float: left;
-  height: 592px ;
+  margin-bottom: 20px;
+  /* height: 592px ; */
   margin-left:35px;
   border: 1px solid #ddd; 
 }
