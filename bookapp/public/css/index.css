@@ -1,0 +1,432 @@
+.container-fluid{
+  width: 1200px !important;
+  margin: 0 auto;
+
+}
+.top {
+  width: 1200px;
+  height: 976px;
+  margin: 0 auto;
+}
+.top>div{
+  float: left;
+}
+.top_left{
+  height: 976px;
+  width: 190px;
+}
+.top_middle{
+  height: 976px;
+  width: 750px;
+  margin:0 10px;
+}
+.top_right {
+  float: right;
+  width: 238px;
+  height: 976px;  
+}
+.top_left_nav{
+  border: 3px solid #bba79e;
+  height: 530px;
+  width: 100%;
+  background-color: #f4f3ef;
+}
+.top_left_nav a{
+  color: #863e18;
+  text-decoration: none;
+}
+.top_left_nav a:hover{
+  color: orange;
+ 
+} 
+.top_left_nav li{
+  background-image: url("../img/index/fenl_bg.png");
+  background-size: 15% ;
+  background-repeat: no-repeat;
+  background-position:143px -101px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+  line-height: 35px;
+  height: 35px;
+}
+.container-fluid h4{
+  width: 1200px;
+  margin: 0 auto;
+  height: 39px;
+  line-height: 39px;
+  position: relative;
+}
+.container-fluid h4 a:first-child{
+  margin-left: 30px;
+}
+.container-fluid h4 a{
+  font-size: 22px;
+  color: black;
+
+}
+.container-fluid h4::before{
+  content:"";
+  width: 24px;
+  position: absolute;
+  top: 10px;
+  background-image: url("../img/index/fenl_bg.png");
+  background-size: 100% ;
+  background-repeat: no-repeat;
+  background-position:top left;
+  display:inline-block;
+  height: 24px;
+}
+.top_list {
+  margin-top: 10px;
+  border: 1px solid #bba79e ;
+}
+.top_list h5{
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  color: #863e18;
+  font-weight: bold;
+  background-color: #f4f3ef;
+}
+.top_list p a:first-child{
+  padding-left: 10px;
+  margin-right: 30px;
+}
+.top_list p a:nth-child(2){
+  margin-left: 10px;
+}
+.top_left img {
+  width: 190px;
+  margin-bottom: 20px;
+}
+/* 轮播 */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 4%;
+  height: 20%;
+  border-radius: 0.2rem;
+  top:40%;
+  background-color: #aaa;
+}
+.carousel-indicators li{
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+}
+.carousel-indicators .active{
+  background-color: #ff4848;
+}
+div.container {
+  padding: 0;
+}
+/* middle */
+.top_middle_title{
+  position: relative;
+  margin-top: 20px;
+  width: 750px;
+  height: 45px;
+  padding-top: 9px;
+  padding-left: 52px;
+  background: url("../img/index/book_zbtuijian_title.png") 0 -1px no-repeat;
+}
+.top_middle_title span:first-child {
+  position: absolute;
+  left:7px;
+  top: 0;
+  display: block;
+  font-size: 27px;
+  color: #fff;
+  height: 43px;
+  width: 43px;
+}
+.top_middle_title p{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #863e18;
+  margin-top: 8px;
+}
+#top_middle_title{
+  margin-top: 20px;
+  height: 555px;
+  width: 750px;
+}
+#top_middle_title .laptop {
+  float: left;
+  width: 150px;
+  height: 250px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+#top_middle_title .laptop:first-child {
+  margin-left: 30px;
+}
+#top_middle_title .laptop:nth-child(5) {
+  margin-left: 30px;
+}
+#top_middle_title img{
+  width: 150px;
+}
+#top_middle_title p{
+  width: 150px;
+  height: 24px;
+  margin-bottom:0 ;
+  line-height: 24px;
+  overflow: hidden;
+  color: #aaa;
+  padding: 0 20px;
+}
+#top_middle_title span{
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #cc3300;
+}
+#top_middle_title span:last-child{
+  margin-right: 10px;
+  font-weight: normal;
+  color: #aaaaaa;
+}
+#top_middle_title p:last-child span:last-child{
+  font-size: 12px;
+}
+/* ----- */
+.top_right .top_list h5{
+  background-color: #fff;
+}
+ .top_list.clearFloat {
+  height: 192px;
+}
+.top_right .top_list:first-child{
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.top_right .top_list.clearFloat:nth-child(3) {
+  margin-top: 20px;
+  height: 588px;
+}
+.top_right .top_list.clearFloat:nth-child(3) img{
+  margin: 10px;
+  width: 220px;
+}
+.top_list ul{
+  padding-left: 10px;
+}
+.top_list li{
+  list-style-type:circle ;
+  list-style-position: inside;
+}
+#new_book img{
+  height: 118px;
+  width: 118px;
+  float: left;
+}
+#new_book div{
+  width: 118px;
+  float: left;
+}
+#new_book p{
+  font-size: 16px;
+  font-weight: bold;
+  color: #c30000;
+  margin: 0;
+}
+#new_book p:nth-child(3){
+  color: #aaaaaa;
+}
+#new_book p:last-child{
+  font-weight: normal;
+  margin-top: 20px;
+  font-size: 14px;
+  color:#487a6f;
+}
+#new_book p:first-child{
+  font-weight: normal;
+  width: 100px;
+  height: 20px;
+  font-size: 14px;
+  color: #000;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+/* middle-------------------------- */
+.middle{
+  width: 1200px;
+  margin-top: 10px;
+}
+.middle .banner img:nth-child(2){
+  margin:0 21px;
+}
+.middle .top_middle_title {
+  width: 920px;
+  background-repeat:repeat-y;
+  padding-bottom: 5px;
+  float: left;
+}
+.middle .top_middle_title p {
+  border-bottom: 2px solid #863e18;
+}
+.middle .top_middle_title p  a{
+  margin-left: 717px;
+  font-size: 14px;
+  color: #666666;
+}
+.middle_right_title{
+  width: 240px;
+  height: 41px;
+  position: relative;
+  float: left;
+  margin-left:35px;
+  margin-top: 22px;
+  border-bottom: 2px solid #863e18; 
+}
+.middle_right_title .sprite_icon{
+  width: 34px;
+  height: 41px;
+  display: inline-block;
+  background: url("../img/index/sprite.png") 5px 4px no-repeat;
+}
+.middle_right_title a{
+  color: #863e18;
+  font-size: 16px;
+  position: absolute;
+  bottom: 2px;
+  font-weight: bold;
+}
+.middle .middle_laptop {
+  width: 920px ;
+  /* height: 592px ; */
+  margin-bottom: 20px;
+  float: left;
+  border: 1px solid #ddd; 
+}
+.middle .middle_list{
+  width: 240px ;
+  float: left;
+  margin-bottom: 20px;
+  /* height: 592px ; */
+  margin-left:35px;
+  border: 1px solid #ddd; 
+}
+ .laptop {
+  float: left;
+  width: 150px;
+  height: 250px;
+  margin-right: 33px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.laptop img{
+  width: 150px;
+}
+.laptop p{
+  width: 150px;
+  height: 24px;
+  margin-bottom:0 ;
+  line-height: 24px;
+  overflow: hidden;
+  color: #aaa;
+  padding: 0 20px;
+}
+.laptop span{
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #cc3300;
+}
+.laptop span:last-child{
+  margin-right: 10px;
+  font-weight: normal;
+  color: #aaaaaa;
+}
+.laptop .time span{
+  font-size:12px; 
+  color: black;
+}
+.laptop .price span:last-child{
+  font-size: 12px;
+}
+/* ul --- li  */
+.tab-aa {
+  width: 240px;
+}
+
+.tab-aa li .num{
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #d10000;
+  font-size: 16px;
+}
+
+.tab-aa a {
+  display: block;
+}
+
+.tab-aa img {
+  height: 120px;
+  width: 120px;
+  float: left;
+  vertical-align: text-top;
+}
+
+.tab-aa .cover {
+  display: none;
+}
+.tab-aa li p{
+  font-size: 12px;
+}
+.tab-aa li>p:first-child{
+  height: 45px;
+  line-height: 46px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.tab-aa li.active .cover{
+  display: block;
+}
+.tab-aa li.active>P:first-child{
+  display: none;
+  
+}
+.middle_list a:hover{
+  color: #000;
+}
+.middle_list ul li a div{
+  float: left;
+} 
+ul li a>p:nth-child(3){
+  height: 44px;
+  width: 72px;
+  line-height: 22px;
+  margin: 0;
+  overflow: hidden;
+}
+.middle_list ul li a div p{
+  height: 20px;
+  line-height: 20px;
+  margin:0px ;
+} 
+.middle_list ul li a div>p:first-child{
+  font-size: 14px;
+  color: #c30000;
+  font-weight: bold;
+} 
+.middle_list ul li a div>p:nth-child(2){
+  font-size: 14px;
+  color: #a7a7a7;
+  font-weight: bold;
+} 
+.middle_list ul li a div>p:nth-child(3){
+  font-size: 14px;
+  color: #487a6f;
+} 
+/* -------- */
