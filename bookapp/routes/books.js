@@ -14,7 +14,7 @@ router.get('/query', function (req, res, next) {
 
 router.get('/cquery', function (req, res, next) {
     let {conditions, num} = req.query;
-    console.log(conditions,num);
+    console.log(conditions, num);
     let values = [conditions, parseInt(num)],
         sql = 'select * from book_laptop order by ? desc limit ?';
     pool.query(sql, values, function (error, result) {
@@ -23,19 +23,17 @@ router.get('/cquery', function (req, res, next) {
     })
 });
 
-router.get('/search',function (req,res,next){
-    let keyword=req.query.keyword,
-        sql=`SELECT * FROM book_laptop WHERE (book_name LIKE "%${keyword}%") or(author like 
+router.get('/search', function (req, res, next) {
+    let keyword = req.query.keyword,
+        sql = `SELECT * FROM book_laptop WHERE (book_name LIKE "%${keyword}%") or(author like 
     "%${keyword}%"
 )
 `;
-    pool.query(sql,function (error, result) {
-        if(error)throw error;
+    pool.query(sql, function (error, result) {
+        if (error) throw error;
         res.send(result);
     })
 });
-
-
 
 
 module.exports = router;
