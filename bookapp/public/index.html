@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/public.css">
   <link rel="stylesheet" href="css/index.css">
   <script src="js/index.js"></script>
-
 </head>
 <body>
   <iframe src="head.html" frameborder="0" class="header" scrolling="no"></iframe>
@@ -152,19 +151,36 @@
               
   </div>
   <div class="middle_list">
-    <ul>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-    </ul>
+      <div class="tab-aa">
+          <ul>
+            <li class="clearFloat">
+            <p><span class="num">1</span>亲密关系：通往灵魂的桥梁（新版）</p>
+            <a  href="" class="cover">
+                <span class="num">1</span>
+                <img src="img/laptop/1.jpg" alt="">
+                <p>父亲的军装（“家园徐（“家园徐（“家园徐（“家园徐</p>
+                <div>
+                    <p>￥39.20</p>
+                    <p><del>￥56.20</del></p>
+                    <p>746条评论</p>
+                </div>
+            </a>
+            </li>
+            <li class="clearFloat">
+            <p ><span class="num">1</span>亲密关系：通往灵魂的桥梁（新版）</p>
+            <a  href="" class="cover">
+                <span class="num">1</span>
+                <img src="img/laptop/2.jpg" alt="">
+                <p>：通往灵魂的桥梁（</p>
+                <div>                
+                <p>￥39.20</p>
+                <p><del>￥56.20</del></p>
+                <p>746条评论</p>
+                </div>
+            </a>
+            </li>
+          </ul>
+          </div>
   </div>
 
   </div>
@@ -172,5 +188,14 @@
   <!-- -----------------------分割线----------------------- -->
 </div>
   <iframe src="footer.html" frameborder="0" class="footer" scrolling="no"></iframe>
+  <script>
+      $(function () {
+      $('.tab-aa li').mouseover(function() {
+          var self=$(this);
+          self.siblings().removeClass('active');
+          self.addClass('active');
+      })
+    })
+    </script>
 </body>
 </html>

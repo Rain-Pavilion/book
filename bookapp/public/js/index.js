@@ -64,9 +64,24 @@ axios.get(url).then((function (response) {
               
   </div>
   <div class="middle_list">
-    <ul id="middle_li${j}">
-      
+    <div class="tab-aa">
+    <ul id="middle_ul${j}">
+      <li>
+      <p><span class="num">1</span>亲密关系：通往灵魂的桥梁（新版）</p>
+      <a  href="" class="cover">
+          <span class="num">1</span>
+          <img src="${data[1].lg_pic}" alt="">
+      </a>
+      </li>
+      <li>
+      <p><span class="num">1</span>亲密关系：通往灵魂的桥梁（新版）</p>
+      <a  href="" class="cover">
+          <span class="num">1</span>
+          <img src="${data[2].lg_pic}" alt="">
+      </a>
+      </li>
     </ul>
+    </div>
   </div>
 
   </div>
@@ -107,6 +122,58 @@ axios.get(url).then((function (response) {
     }
     
   }
-    
-    
+  // ------------
+   // midddle ul
+   for(let m=1;m<=3;m++){
+    let html_middle_li=``;
+    if(m==1){
+      var start=17;
+      var end=8;
+    }else if(m==2){
+      var start=27;
+      var end=18;
+    }else if(m==3){
+      var start=32;
+      var end=28;
+    }
+    var a=1;
+  for(var i=start;i>=end;i--){
+    html_middle_li+=`
+        <li class="clearFloat">
+            <p><span class="num">${a}</span>${data[i].book_name}</p>
+            <a  href="/detail.html?${data[i].lid}" class="cover">
+                <span class="num">${a}</span>
+                <img src="${data[i].lg_pic}" alt="">
+                <p>${data[i].book_name}</p>
+                <div>
+                    <p>￥${data[i].price}</p>
+                    <p><del>￥${parseInt(data[i].price*1.2)}</del></p>
+                    <p>${data[i].comment_count}</p>
+                </div>
+            </a>
+        </li>
+      `; 
+      a++;
+  }
+  if(m==1){
+    middle_ul1.innerHTML=html_middle_li
+  }else if(m==2){
+    middle_ul2.innerHTML=html_middle_li
+  }else if(m==3){
+    middle_ul3.innerHTML=html_middle_li
+  }
+  
+}
+  // 自动手风琴
+  $(function () {
+     var tabAa=$('.tab-aa li');
+     var firstlist=$('.tab-aa li:first-child');
+     firstlist.addClass('active');
+      tabAa.mouseover(function() {
+      var self=$(this);
+      self.siblings().removeClass('active');
+      self.addClass('active');
+  })
+})  
+// ————————
 }));
