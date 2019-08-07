@@ -28,40 +28,44 @@ axios.get(url).then((function (response) {
     top_middle_title.innerHTML = html2;
     //middle_laptop1
     let html_laptop1=``;
-    for(var i=1;i<=2;i++){
+    for(var j=1;j<=3;j++){
+      if(j==1){
+        var span="新";
+        var p="书推荐";
+        var title="新书热卖榜";
+      }else if(j==2){
+        var span="当";
+        var p="当推荐";
+        var title="近7日畅销榜";
+      }
+      else if(j==3){
+        var span="畅";
+        var p="销";
+        var title="电子书榜";
+      }
     html_laptop1+=`
     <div class="middle">
     <div class="banner">
-    <img src="img/index/banner1.jpg" alt="">
-    <img src="img/index/banner2.jpg" alt="">
-    <img src="img/index/banner3.jpg" alt="">
+    <img src="img/index/banner${(j-1)*3+1}.jpg" alt="">
+    <img src="img/index/banner${(j-1)*3+2}.jpg" alt="">
+    <img src="img/index/banner${(j-1)*3+3}.jpg" alt="">
   </div>
   <div class="top_middle_title clearFloat">
-      <span>新</span><p>书上架 <a href="">更多新书戳这里</a></p>
+      <span>${span}</span><p>${p} <a href="">更多新书戳这里</a></p>
     </div>
     <div class="middle_right_title clearFloat">
-      <div class="sprite_icon"></div><a href="">新书热卖</a>
+      <div class="sprite_icon"></div><a href="">${title}</a>
     </div>
   
   <div class="middle_laptop">
-      <div class="new_laptop">
+      <div id="new_laptop${j}">
       
       </div>
               
   </div>
   <div class="middle_list">
-    <ul>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
+    <ul id="middle_li${j}">
+      
     </ul>
   </div>
 
@@ -70,8 +74,20 @@ axios.get(url).then((function (response) {
   }
   middle_laptop1.innerHTML=html_laptop1;
     // html3
-    let html_middle=``;
-    for(var i=8;i<=18;i++){
+    // midddle left
+    for(let k=1;k<=3;k++){
+      let html_middle=``;
+      if(k==1){
+        var start=8;
+        var end=17;
+      }else if(k==2){
+        var start=18;
+        var end=27;
+      }else if(k==3){
+        var start=28;
+        var end=32;
+      }
+    for(var i=start;i<=end;i++){
       html_middle+=`
       <div class="laptop">
           <a href="/detail.html?lid=${data[i].lid}"><img src="${data[i].lg_pic}" alt=""></a>
@@ -80,11 +96,17 @@ axios.get(url).then((function (response) {
           <p class="time"><span>${data[i].shelf_time}</span></p>
           <p class="price"><span>￥${data[i].price}</span><span><del>￥${parseInt(data[i].price*1.2)}</del></span></p> 
         </div>
-        `;
-       
+        `; 
     }
-    let laptop=document.querySelectorAll(".new_laptop");
-    for(let i in laptop){
-        laptop[i].innerHTML=html_middle
+    if(k==1){
+      new_laptop1.innerHTML=html_middle
+    }else if(k==2){
+      new_laptop2.innerHTML=html_middle
+    }else{
+      new_laptop3.innerHTML=html_middle
     }
+    
+  }
+    
+    
 }));
