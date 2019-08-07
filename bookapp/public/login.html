@@ -6,13 +6,31 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/public.css">
     <style>
+        body{
+            background-image: url("img/sprite/2019080618134774653.jpg");
+            background-repeat: no-repeat;
+            background-position: 53% -16%;
+        }
+        .click-area {
+            display: block;
+            width: 655px;
+            height: 415px;
+            position: absolute;
+            z-index: 100;
+            top: 85px;
+            left: 5px;
+        }
+
     </style>
 </head>
 <body>
-        <div class="login">
-            <div class="my-container index">
-                <img src="img/sprite/logo.png">
-            </div>
-        </div>
+<div class="login">
+    <div class="my-container index">
+        <img src="img/sprite/logo.png">
+    </div>
+    <div class="logo-bg">
+        <a href="" class="click-area"></a>
+    </div>
+</div>
 </body>
 </html>

@@ -1,176 +1,165 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" href="css/public.css">
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
 
 </head>
 <body>
-  <iframe src="head.html" frameborder="0" class="header" scrolling="no"></iframe>
-  <div class="container-fluid">
+<iframe src="head.html" frameborder="0" class="header" scrolling="no"></iframe>
+<div class="container-fluid">
     <h4><a href="">图书</a>&nbsp;|&nbsp;<a href="">文学</a></h4>
-  <div class="top"> 
-    <div class="top_left">
-      <div class="top_left_nav">
-        <ul>
-          <li><a href="">中国现当代随笔</a></li>
-          <li><a href="">文集</a></li>
-          <li><a href="">中国古诗词</a></li>
-          <li><a href="">外国随笔</a></li>
-          <li><a href="">文学理论</a></li>
-          <li><a href="">纪实文学</a></li>
-          <li><a href="">文学评论与鉴赏</a></li>
-          <li><a href="">中国现当代诗歌</a></li>
-          <li><a href="">外国诗歌</a></li>
-          <li><a href="">名家作品</a></li>
-          <li><a href="">民间文学</a></li>
-          <li><a href="">戏剧</a></li>
-          <li><a href="">中国古代随笔</a></li>
-          <li><a href="">文学类考试</a></li>
-          <li><a href="">英文原版书-文学</a></li>
-        </ul>
-      </div>
-      <div class="top_list">
-        <h5>推荐分类</h5>
-        <p><a href="">特价文学</a>|<a href="">原版文学</a></p>
-        <p><a href="">文玩拍卖</a>|<a href="">文学电子书</a></p>
-      </div>
-      <img src="img/index/9006660079349325_1_o.jpg" alt="">
-      <img src="img/index/ycxb.jpg" alt="">
-      <img src="img/index/9002860075685198_1_o.jpg" alt="">
-    </div>
-    <div class="top_middle">
-        <div class="container bg-light">
-              <div id="mycarousel" class="carousel" data-ride="carousel">
-                <!-- 1.轮播图片 -->
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <a href="/container.html">
-                          <img src="img/carousel/like_w.jpg" alt="" class="w-100">
-                        </a>
-                  </div>
-                  <div class="carousel-item">
-                    <a href="/container.html">
-                      <img src="img/carousel/qbs_w.jpg" alt="" class="w-100">
-                    </a>
-                  </div>
-                  <div class="carousel-item">
-                      <a href="/container.html">
-                          <img src="img/carousel/yuhua_w.jpg" alt="" class="w-100">
-                        </a>
-                  </div>
-                  <div class="carousel-item">
-                      <a href="/container.html">
-                          <img src="img/carousel/1998_w.jpg" alt="" class="w-100">
-                        </a>
-                  </div>
-                </div>
-                <!-- 2.左右箭头 -->
-                <a data-slide="prev"  href="#carousel" class="carousel-control-prev">
-                  <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a data-slide="next" href="#mycarousel" class="carousel-control-next">
-                  <span class="carousel-control-next-icon"> </span>
-                </a>
-                <!-- 3.轮播指示器 -->
-                <ul class="carousel-indicators">
-                  <li data-slide-to="0" data-target="#mycarousel"  class="active"></li>
-                  <li data-slide-to="1" data-target="#mycarousel"></li>
-                  <li data-slide-to="2" data-target="#mycarousel"></li>
-                  <li data-slide-to="3" data-target="#mycarousel"></li>
+    <div class="top">
+        <div class="top_left">
+            <div class="top_left_nav">
+                <ul>
+                    <li><a href="">中国现当代随笔</a></li>
+                    <li><a href="">文集</a></li>
+                    <li><a href="">中国古诗词</a></li>
+                    <li><a href="">外国随笔</a></li>
+                    <li><a href="">文学理论</a></li>
+                    <li><a href="">纪实文学</a></li>
+                    <li><a href="">文学评论与鉴赏</a></li>
+                    <li><a href="">中国现当代诗歌</a></li>
+                    <li><a href="">外国诗歌</a></li>
+                    <li><a href="">名家作品</a></li>
+                    <li><a href="">民间文学</a></li>
+                    <li><a href="">戏剧</a></li>
+                    <li><a href="">中国古代随笔</a></li>
+                    <li><a href="">文学类考试</a></li>
+                    <li><a href="">英文原版书-文学</a></li>
                 </ul>
-              </div>
-    </div>
-  <!-- carousel -->
-  <div class="top_middle_title">
-    <span>主</span><p>编推荐</p>
-  </div>
-  <div id="top_middle_title">
-    </div>
-  </div>
-  <div class="top_right">
-    <div class="top_list">
-      <h5>书讯快递</h5>
-      <ul>
-        <li><a href="">精选文艺书49元5件速来抢！</a></li>
-        <li><a href="">不知道买啥看书单</a></li>
-        <li><a href="">再孤单的人也有同类</a></li>
-      </ul>
-    </div>
-    <div class="top_list clearFloat" >
-      <h5>新书推荐</h5>
-      <div id="new_book"> 
-        
-      </div>
-    </div>
-    <div class="top_list clearFloat" >
-        <h5>精彩专题</h5>
-        <img src="img/index/9006170060359062_1_o.jpg" alt="">
-        <img src="img/index/9002970060860725_1_o.jpg" alt="">
-        <img src="img/index/240120mtyzt.jpg" alt="">
-        <img src="img/index/9002810045134575_1_o.jpg" alt="">
-      </div>
-    <!-- right -->
-  </div> 
-  <!-- top -->
-</div>
-  <!-- middle -->
-  <div id="middle_laptop1">
-  <div class="middle">
-    <div class="banner">
-    <img src="img/index/banner1.jpg" alt="">
-    <img src="img/index/banner2.jpg" alt="">
-    <img src="img/index/banner3.jpg" alt="">
-  </div>
-  <div class="top_middle_title clearFloat">
-      <span>新</span><p>书上架 <a href="">更多新书戳这里</a></p>
-    </div>
-    <div class="middle_right_title clearFloat">
-      <div class="sprite_icon"></div><a href="">新书热卖</a>
-    </div>
-  
-  <div class="middle_laptop">
-      <div id="new_laptop">
-      <!-- <div class="laptop">
-          <a href="/detail.html?lid=${data[i].lid}"><img src="img/laptop/1.jpg" alt=""></a>
-          <p class="name"><a href="/detail.html?lid=${data[i].lid}" title="">雅舍闲情：余生从容，便是安好（梁实</a></p>
-          <p class="author" title="${data[i].publishing}">梁实秋</p>
-          <p class="time"><span>出版时间2019-5-6</span></p>
-          <p class="price"><span>￥19.90</span><span><del>￥39.80</del></span></p> 
-        </div> -->
-      </div>
-              
-  </div>
-  <div class="middle_list">
-    <ul>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-    </ul>
-  </div>
+            </div>
+            <div class="top_list">
+                <h5>推荐分类</h5>
+                <p><a href="">特价文学</a>|<a href="">原版文学</a></p>
+                <p><a href="">文玩拍卖</a>|<a href="">文学电子书</a></p>
+            </div>
+            <img src="img/index/9006660079349325_1_o.jpg" alt="">
+            <img src="img/index/ycxb.jpg" alt="">
+            <img src="img/index/9002860075685198_1_o.jpg" alt="">
+        </div>
+        <div class="top_middle">
+            <div class="container bg-light">
+                <div id="mycarousel" class="carousel" data-ride="carousel">
+                    <!-- 1.轮播图片 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="/container.html">
+                                <img src="img/carousel/like_w.jpg" alt="" class="w-100">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="/container.html">
+                                <img src="img/carousel/qbs_w.jpg" alt="" class="w-100">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="/container.html">
+                                <img src="img/carousel/yuhua_w.jpg" alt="" class="w-100">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="/container.html">
+                                <img src="img/carousel/1998_w.jpg" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 2.左右箭头 -->
+                    <a data-slide="prev" href="#carousel" class="carousel-control-prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a data-slide="next" href="#mycarousel" class="carousel-control-next">
+                        <span class="carousel-control-next-icon"> </span>
+                    </a>
+                    <!-- 3.轮播指示器 -->
+                    <ul class="carousel-indicators">
+                        <li data-slide-to="0" data-target="#mycarousel" class="active"></li>
+                        <li data-slide-to="1" data-target="#mycarousel"></li>
+                        <li data-slide-to="2" data-target="#mycarousel"></li>
+                        <li data-slide-to="3" data-target="#mycarousel"></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- carousel -->
+            <div class="top_middle_title">
+                <span>主</span>
+                <p>编推荐</p>
+            </div>
+            <div id="top_middle_title">
+            </div>
+        </div>
+        <div class="top_right">
+            <div class="top_list">
+                <h5>书讯快递</h5>
+                <ul>
+                    <li><a href="">精选文艺书49元5件速来抢！</a></li>
+                    <li><a href="">不知道买啥看书单</a></li>
+                    <li><a href="">再孤单的人也有同类</a></li>
+                </ul>
+            </div>
+            <div class="top_list clearFloat">
+                <h5>新书推荐</h5>
+                <div id="new_book">
 
-  </div>
+                </div>
+            </div>
+            <div class="top_list clearFloat">
+                <h5>精彩专题</h5>
+                <img src="img/index/9006170060359062_1_o.jpg" alt="">
+                <img src="img/index/9002970060860725_1_o.jpg" alt="">
+                <img src="img/index/240120mtyzt.jpg" alt="">
+                <img src="img/index/9002810045134575_1_o.jpg" alt="">
+            </div>
+            <!-- right -->
+        </div>
+        <!-- top -->
+    </div>
+    <!-- middle -->
+    <div id="middle_laptop1">
+        <div class="middle">
+            <div class="banner">
+                <img src="img/index/banner1.jpg" alt="">
+                <img src="img/index/banner2.jpg" alt="">
+                <img src="img/index/banner3.jpg" alt="">
+            </div>
+            <div class="top_middle_title clearFloat">
+                <span>新</span>
+                <p>书上架 <a href="">更多新书戳这里</a></p>
+            </div>
+            <div class="middle_right_title clearFloat">
+                <div class="sprite_icon"></div>
+                <a href="">新书热卖</a>
+            </div>
+
+            <div class="middle_laptop">
+                <div id="new_laptop">
+                    <!-- <div class="laptop">
+                        <a href="/detail.html?lid=${data[i].lid}"><img src="img/laptop/1.jpg" alt=""></a>
+                        <p class="name"><a href="/detail.html?lid=${data[i].lid}" title="">雅舍闲情：余生从容，便是安好（梁实</a></p>
+                        <p class="author" title="${data[i].publishing}">梁实秋</p>
+                        <p class="time"><span>出版时间2019-5-6</span></p>
+                        <p class="price"><span>￥19.90</span><span><del>￥39.80</del></span></p>
+                      </div> -->
+                </div>
+
+            </div>
+            <div class="middle_list">
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------分割线----------------------- -->
 </div>
-  <!-- -----------------------分割线----------------------- -->
-</div>
-  <iframe src="footer.html" frameborder="0" class="footer" scrolling="no"></iframe>
+<iframe src="footer.html" frameborder="0" class="footer" scrolling="no"></iframe>
 </body>
 </html>
