@@ -1,3 +1,8 @@
+.container-fluid{
+  width: 1200px !important;
+  margin: 0 auto;
+
+}
 .top {
   width: 1200px;
   height: 976px;
@@ -127,9 +132,9 @@ div.container {
   height: 45px;
   padding-top: 9px;
   padding-left: 52px;
-  background-image: url("../img/index/book_zbtuijian_title.png");
+  background: url("../img/index/book_zbtuijian_title.png") 0 -1px no-repeat;
 }
-.top_middle_title span:first-child{
+.top_middle_title span:first-child {
   position: absolute;
   left:7px;
   top: 0;
@@ -249,4 +254,99 @@ div.container {
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
+}
+/* middle-------------------------- */
+.middle{
+  width: 1200px;
+  margin-top: 10px;
+}
+.middle .banner img:nth-child(2){
+  margin:0 21px;
+}
+.middle .top_middle_title {
+  width: 920px;
+  background-repeat:repeat-y;
+  padding-bottom: 5px;
+  float: left;
+}
+.middle .top_middle_title p {
+  border-bottom: 2px solid #863e18;
+}
+.middle .top_middle_title p  a{
+  margin-left: 717px;
+  font-size: 14px;
+  color: #666666;
+}
+.middle_right_title{
+  width: 240px;
+  height: 41px;
+  position: relative;
+  float: left;
+  margin-left:35px;
+  margin-top: 22px;
+  border-bottom: 2px solid #863e18; 
+}
+.middle_right_title .sprite_icon{
+  width: 34px;
+  height: 41px;
+  display: inline-block;
+  background: url("../img/index/sprite.png") 5px 4px no-repeat;
+}
+.middle_right_title a{
+  color: #863e18;
+  font-size: 16px;
+  position: absolute;
+  bottom: 2px;
+  font-weight: bold;
+}
+.middle .middle_laptop {
+  width: 920px ;
+  height: 592px ;
+  float: left;
+  border: 1px solid #ddd; 
+}
+.middle .middle_list{
+  width: 240px ;
+  float: left;
+  height: 592px ;
+  margin-left:35px;
+  border: 1px solid #ddd; 
+}
+ .laptop {
+  float: left;
+  width: 150px;
+  height: 250px;
+  margin-right: 33px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.laptop img{
+  width: 150px;
+}
+.laptop p{
+  width: 150px;
+  height: 24px;
+  margin-bottom:0 ;
+  line-height: 24px;
+  overflow: hidden;
+  color: #aaa;
+  padding: 0 20px;
+}
+.laptop span{
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #cc3300;
+}
+.laptop span:last-child{
+  margin-right: 10px;
+  font-weight: normal;
+  color: #aaaaaa;
+}
+.laptop .time span{
+  font-size:12px; 
+  color: black;
+}
+.laptop .price span:last-child{
+  font-size: 12px;
 }
