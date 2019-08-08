@@ -148,7 +148,7 @@ axios.get(url).then((function (response) {
                 <div>
                     <p>￥${data[i].price}</p>
                     <p><del>￥${parseInt(data[i].price*1.2)}</del></p>
-                    <p>${data[i].comment_count}</p>
+                    <p>${data[i].comment_count}条评论</p>
                 </div>
             </a>
         </li>
