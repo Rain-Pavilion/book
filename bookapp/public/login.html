@@ -9,8 +9,14 @@
         body{
             background-image: url("img/sprite/2019080618134774653.jpg");
             background-repeat: no-repeat;
-            background-position: 53% -16%;
+            background-position: 50% -250%;
         }
+
+        .index{
+            margin-top: 12px;
+            margin-bottom: 14px;
+        }
+
         .click-area {
             display: block;
             width: 655px;
@@ -19,17 +25,26 @@
             z-index: 100;
             top: 85px;
             left: 5px;
+            clear: both;
         }
-
+        .login-area{
+            width: 362px;
+            height: 457px;
+            background:yellow;
+            float: right;
+            margin-top: 90px;
+        }
     </style>
 </head>
 <body>
-<div class="login">
+<div class="login clearFloat">
     <div class="my-container index">
         <img src="img/sprite/logo.png">
     </div>
     <div class="logo-bg">
         <a href="" class="click-area"></a>
+    </div>
+    <div class="login-area">
     </div>
 </div>
 </body>
