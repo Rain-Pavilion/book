@@ -29,7 +29,13 @@ axios.get(url).then((function (response) {
     //middle_laptop1
     let html_laptop1=``;
     for(var j=1;j<=7;j++){
+      var banner1="";
+      var banner2="";
+      var banner3="";
       if(j==1){
+        banner1="img/index/banner1.jpg"
+        banner2="img/index/banner2.jpg"
+        banner3="img/index/banner3.jpg"
         var span="新";
         var p="书推荐";
         var title="新书热卖榜";
@@ -39,6 +45,9 @@ axios.get(url).then((function (response) {
         var title="近7日畅销榜";
       }
       else if(j==3){
+        banner1="img/index/banner7.jpg"
+        banner2="img/index/banner8.jpg"
+        banner3="img/index/banner9.jpg"
         var span="畅";
         var p="销";
         var title="电子书榜";
@@ -51,6 +60,9 @@ axios.get(url).then((function (response) {
         var p="子书";
         var title="";
       }else if(j==6){
+        banner1="img/index/banner16.jpg"
+        banner2="img/index/banner17.jpg"
+        banner3="img/index/banner18.jpg"
         var span="热";
         var p="门";
         var title="精彩专题";
@@ -62,9 +74,9 @@ axios.get(url).then((function (response) {
     html_laptop1+=`
     <div class="middle">
     <div class="banner">
-    <img src="img/index/banner${(j-1)*3+1}.jpg" alt="">
-    <img src="img/index/banner${(j-1)*3+2}.jpg" alt="">
-    <img src="img/index/banner${(j-1)*3+3}.jpg" alt="">
+    <img src="${banner1}" alt="">
+    <img src="${banner2}" alt="">
+    <img src="${banner3}" alt="">
   </div>
   <div class="top_middle_title clearFloat">
       <span>${span}</span><p>${p} <a href="">更多新书戳这里</a></p>
