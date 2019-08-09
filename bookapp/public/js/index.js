@@ -3,7 +3,7 @@ axios.get(url).then((function (response) {
     let data = response.data;
     let num=Math.floor(Math.random()*80);
     let html1 = '';
-        html1 += `   <img src="${data[num].lg_pic}" alt="" >
+        html1 += `<a href="/detail.html?lid=${data[num].lid}">  <img src="${data[num].lg_pic}" alt="" ></a>
         <div>
           <p>${data[num].book_name}</p>
           <p>￥${data[num].price}</p>
@@ -28,7 +28,7 @@ axios.get(url).then((function (response) {
     top_middle_title.innerHTML = html2;
     //middle_laptop1
     let html_laptop1=``;
-    for(var j=1;j<=3;j++){
+    for(var j=1;j<=7;j++){
       if(j==1){
         var span="新";
         var p="书推荐";
@@ -42,6 +42,22 @@ axios.get(url).then((function (response) {
         var span="畅";
         var p="销";
         var title="电子书榜";
+      }else if(j==4){
+        var span="超";
+        var p="值";
+        var title="";
+      }else if(j==5){
+        var span="电";
+        var p="子书";
+        var title="";
+      }else if(j==6){
+        var span="热";
+        var p="门";
+        var title="精彩专题";
+      }else if(j==7){
+        var span="热";
+        var p="点";
+        var title="小当推荐";
       }
     html_laptop1+=`
     <div class="middle">
@@ -66,20 +82,7 @@ axios.get(url).then((function (response) {
   <div class="middle_list">
     <div class="tab-aa">
     <ul id="middle_ul${j}">
-      <li>
-      <p><span class="num">1</span>亲密关系：通往灵魂的桥梁（新版）</p>
-      <a  href="" class="cover">
-          <span class="num">1</span>
-          <img src="${data[1].lg_pic}" alt="">
-      </a>
-      </li>
-      <li>
-      <p><span class="num">1</span>亲密关系：通往灵魂的桥梁（新版）</p>
-      <a  href="" class="cover">
-          <span class="num">1</span>
-          <img src="${data[2].lg_pic}" alt="">
-      </a>
-      </li>
+     
     </ul>
     </div>
   </div>
@@ -90,7 +93,7 @@ axios.get(url).then((function (response) {
   middle_laptop1.innerHTML=html_laptop1;
     // html3
     // midddle left
-    for(let k=1;k<=3;k++){
+    for(let k=1;k<=7;k++){
       let html_middle=``;
       if(k==1){
         var start=8;
@@ -101,9 +104,22 @@ axios.get(url).then((function (response) {
       }else if(k==3){
         var start=28;
         var end=32;
+      }else if(k==4){
+        var start=33;
+        var end=37;
+      }else if(k==5){
+        var start=38;
+        var end=42;
+      }else if(k==6){
+        var start=43;
+        var end=47;
+      }else if(k==7){
+        var start=48;
+        var end=52;
       }
     for(var i=start;i<=end;i++){
       html_middle+=`
+      <div class="w-laptop"></div>
       <div class="laptop">
           <a href="/detail.html?lid=${data[i].lid}"><img src="${data[i].lg_pic}" alt=""></a>
           <p class="name"><a href="/detail.html?lid=${data[i].lid}" title="${data[i].book_name}">${data[i].book_name}</a></p>
@@ -117,14 +133,22 @@ axios.get(url).then((function (response) {
       new_laptop1.innerHTML=html_middle
     }else if(k==2){
       new_laptop2.innerHTML=html_middle
-    }else{
+    }else if(k==3){
       new_laptop3.innerHTML=html_middle
+    }else if(k==4){
+      new_laptop4.innerHTML=html_middle
+    }else if(k==5){
+      new_laptop5.innerHTML=html_middle
+    }else if(k==6){
+      new_laptop6.innerHTML=html_middle
+    }else if(k==7){
+      new_laptop7.innerHTML=html_middle
     }
     
   }
   // ------------
    // midddle ul
-   for(let m=1;m<=3;m++){
+   for(let m=1;m<=5;m++){
     let html_middle_li=``;
     if(m==1){
       var start=17;
@@ -135,6 +159,12 @@ axios.get(url).then((function (response) {
     }else if(m==3){
       var start=32;
       var end=28;
+    }else if(m==4){
+      var start=33;
+      var end=29;
+    }else if(m==5){
+      var start=38;
+      var end=34;
     }
     var a=1;
   for(var i=start;i>=end;i--){
@@ -148,7 +178,7 @@ axios.get(url).then((function (response) {
                 <div>
                     <p>￥${data[i].price}</p>
                     <p><del>￥${parseInt(data[i].price*1.2)}</del></p>
-                    <p>${data[i].comment_count}</p>
+                    <p>${data[i].comment_count}条评论</p>
                 </div>
             </a>
         </li>
@@ -161,6 +191,10 @@ axios.get(url).then((function (response) {
     middle_ul2.innerHTML=html_middle_li
   }else if(m==3){
     middle_ul3.innerHTML=html_middle_li
+  }else if(m==4){
+    middle_ul4.innerHTML=html_middle_li
+  }else if(m==5){
+    middle_ul5.innerHTML=html_middle_li
   }
   
 }

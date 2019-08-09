@@ -47,8 +47,17 @@
     font-size:36px;
 }
 .price1 a{
-    width:6rem;height:3rem;
-    padding-left: 5rem;
+    height: 45px;
+    width: 90px;
+    right: 40px;
+    top: 66px;
+    overflow: hidden;
+    font-size: 28px ;
+    text-align: center;
+    position: absolute;
+    text-decoration:none;
+    border-radius:10px;
+    background:linear-gradient(to bottom,#fce212,#e56301);
 }
 .price2{
     position: absolute;
