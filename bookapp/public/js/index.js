@@ -1,14 +1,14 @@
 let url = 'http://127.0.0.1:8080/books/cquery?conditions=lid_count&num=80';
 axios.get(url).then((function (response) {
     let data = response.data;
-    let num=Math.floor(Math.random()*80);
+    let num1=Math.floor(Math.random()*80);
     let html1 = '';
-        html1 += `<a href="/detail.html?lid=${data[num].lid}">  <img src="${data[num].lg_pic}" alt="" ></a>
+        html1 += `<a href="/detail.html?lid=${data[num1].lid}">  <img src="${data[num1].lg_pic}" alt="" ></a>
         <div>
-          <p>${data[num].book_name}</p>
-          <p>￥${data[num].price}</p>
-          <p><del>￥${parseInt(data[num].price*1.2)}</del></p>
-          <p>${data[num].comment_count}条评论</p>
+          <p>${data[num1].book_name}</p>
+          <p>￥${data[num1].price}</p>
+          <p><del>￥${parseInt(data[num1].price*1.2)}</del></p>
+          <p>${data[num1].comment_count}条评论</p>
       </div>
         `;
     new_book.innerHTML = html1;
@@ -95,10 +95,12 @@ axios.get(url).then((function (response) {
               
   </div>
   <div class="middle_list">
-    <div class="tab-aa">
-    <ul id="middle_ul${j}">
-     
-    </ul>
+    <div id="middle_list${j}">
+      <div class="tab-aa">
+      <ul id="middle_ul${j}">
+      
+      </ul>
+      </div>
     </div>
   </div>
 
@@ -252,6 +254,43 @@ axios.get(url).then((function (response) {
   }
   
 }
+let middle_list6_html=`<div><img src="img/index/list_banner1.jpg" alt=""></div>
+<div><img src="img/index/list_banner2.jpg" alt=""></div>
+<div><img src="img/index/list_banner3.jpg" alt=""></div>
+<p><a href="">愿你被这世界温柔相待</a></p>
+<p><a href="">雪隐鹭鸶——《金瓶梅》的声色与虚无</a></p>
+<p><a href="">你配的上更好的世界</a></p>
+<p><a href="">把时间浪费在美好的事物上</a></p>
+<p><a href="">惊奇之心</a></p>`;
+let num2=Math.floor(Math.random()*80);
+let middle_list7_html=`
+<div>
+  <div>
+<a href="/detail.html?lid=${data[num2].lid}">
+<img src="${data[num2].lg_pic}" alt="" ></a>
+  </div>
+<div>
+  <p>${data[num2].book_name}</p>
+  <p>￥${data[num2].price}</p>
+  <p><del>￥${parseInt(data[num2].price*1.2)}</del></p>
+  <p>${data[num2].comment_count}条评论</p>
+</div></div>
+<div><img src="img/index/list_banner4.jpg" alt=""></div>
+<div><img src="img/index/list_banner5.jpg" alt=""></div>
+<div><img src="img/index/list_banner6.jpg" alt=""></div>
+`;
+middle_list6.innerHTML=middle_list6_html;
+middle_list7.innerHTML=middle_list7_html;
+var super_price_html=`
+<ul>
+   <li><img src="img/index/super_price.jpg" alt=""></li>`;
+ for(var h=62;h<=78;h++){
+   let num3=(Math.ceil(Math.random()*3)+2).toFixed(1);
+  super_price_html+=`<li><a href="/detail.html?lid=${data[h].lid}"><img src="${data[h].lg_pic}" alt=""></a>
+  <p><span>${num3}折</span><span>${data[h].book_name}</span></p></li>`
+ }
+ super_price_html+=`</ul><div class="li_h"></div>`;
+ super_price.innerHTML=super_price_html;
   // 自动手风琴
   $(function () {
      var tabAa=$('.tab-aa li');
