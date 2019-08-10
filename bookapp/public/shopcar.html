@@ -36,9 +36,11 @@
             <li></li>
         </ul>
     </div>
-    <div class="block-product">
-        <ul class="product-group" id="recommand">
-        </ul>
+    <div class="block-product clearFloat">
+        <div class="union">
+            <ul class="product-group">
+            </ul>
+        </div>
     </div>
 </div>
 
@@ -59,9 +61,11 @@
             </li>
         </ul>
     </div>
-    <div class="block-product">
-        <ul class="product-group">
-        </ul>
+    <div class="block-product clearFloat">
+        <div class="union">
+            <ul class="product-group">
+            </ul>
+        </div>
     </div>
 </div>
 
@@ -82,20 +86,25 @@
             </li>
         </ul>
     </div>
-    <div class="block-product">
-        <ul class="product-group">
-        </ul>
+    <div class="block-product clearFloat">
+        <div class="union">
+            <ul class="product-group">
+            </ul>
+        </div>
     </div>
 </div>
 
 
 <script>
-    let url = 'http://127.0.0.1:8080/books/cquery?conditions=comment_count&num=10';
-    axios.get(url).then((function (response) {
-        let data = response.data;
-        let html = '';
-        for (let i = 0; i < data.length; i++) {
-            html += `<li>
+    var target = document.querySelectorAll('.block-product .product-group');
+    var filed=['comment_count','price','lid'];
+    for (let i = 0; i < target.length; i++) {
+        var url =`http://127.0.0.1:8080/books/cquery?conditions=${filed[i]}&num=10`;
+        axios.get(url).then((function (response) {
+            let data = response.data;
+            let html = '';
+            for (let i = 0; i < data.length; i++) {
+                html += `<li>
                 <a href="/detail.html?lid=${data[i].lid}">
                     <img src="${data[i].lg_pic}" alt="">
                     <p class="text"><a href="">${data[i].book_name}</a></p>
@@ -104,9 +113,13 @@
                     <a class='info'>已有<span class="comment_num">${data[i].comment_count}</span>位用户评</a>
                 </a>
             </li>`
-        }
-        recommand.innerHTML = html;
-    }));
+            }
+            for (let i = 0; i < target.length; i++) {
+                target[i].innerHTML = html
+            }
+        }));
+    }
+
 </script>
 </body>
 </html>
