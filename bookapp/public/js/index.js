@@ -86,6 +86,9 @@ axios.get(url).then((function (response) {
     </div>
   
   <div class="middle_laptop">
+      <div id="w_laptop${j}">
+      
+      </div>
       <div id="new_laptop${j}">
       
       </div>
@@ -102,10 +105,46 @@ axios.get(url).then((function (response) {
   </div>
     `;
   }
+  var w_laptop_html1=`<div class="top-w-laptop">
+  <p>1.</p>
+  <div>
+    <div>
+    <a href="/detail.html?lid=${data[44].lid}">
+    <img src="${data[44].lg_pic}" alt="">
+    </a>
+    </div>
+    <div class="text">
+      <p>${data[44].book_name}</p>
+      <img src="img/index/start.png" alt="">
+      <p>当当价：<span>¥${data[44].price}</span><span>市场价：¥${parseInt(data[44].price*1.6).toFixed(2)}</span></p>
+      <p>${data[44].content_introduction}</p>
+    </div>
+  </div>
+  <div class="border"></div>
+  <div>
+      <span>2.</span><span>3.</span><span>4.</span><span>5.</span><span>6.</span>
+    </div>
+  </div> `;
+  var w_laptop_html2=`<div class="top-w-laptop">
+  <p>1.</p>
+  <div>
+    <div><a href="/detail.html?lid=${data[26].lid}"><img src="${data[26].lg_pic}" alt=""></a></div>
+    <div class="text">
+      <p>${data[26].book_name}</p>
+      <img src="img/index/start.png" alt="">
+      <p>当当价：<span>¥${data[26].price}</span><span>市场价：¥${parseInt(data[26].price*1.6).toFixed(2)}</span></p>
+      <p>${data[26].content_introduction}</p>
+    </div>
+  </div>
+  <div class="border"></div>
+  <div>
+      <span>2.</span><span>3.</span><span>4.</span><span>5.</span><span>6.</span>
+    </div>
+  </div> `;
   middle_laptop1.innerHTML=html_laptop1;
     // html3
     // midddle left
-    for(let k=1;k<=7;k++){
+    for(var k=1;k<=7;k++){
       let html_middle=``;
       if(k==1){
         var start=8;
@@ -131,7 +170,6 @@ axios.get(url).then((function (response) {
       }
     for(var i=start;i<=end;i++){
       html_middle+=`
-      <div class="w-laptop"></div>
       <div class="laptop">
           <a href="/detail.html?lid=${data[i].lid}"><img src="${data[i].lg_pic}" alt=""></a>
           <p class="name"><a href="/detail.html?lid=${data[i].lid}" title="${data[i].book_name}">${data[i].book_name}</a></p>
@@ -152,8 +190,12 @@ axios.get(url).then((function (response) {
     }else if(k==5){
       new_laptop5.innerHTML=html_middle
     }else if(k==6){
+      lap=1;
+      w_laptop6.innerHTML=w_laptop_html1
       new_laptop6.innerHTML=html_middle
     }else if(k==7){
+      lap=2;
+      w_laptop7.innerHTML=w_laptop_html2
       new_laptop7.innerHTML=html_middle
     }
     
