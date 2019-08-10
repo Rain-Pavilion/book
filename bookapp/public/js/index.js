@@ -29,7 +29,13 @@ axios.get(url).then((function (response) {
     //middle_laptop1
     let html_laptop1=``;
     for(var j=1;j<=7;j++){
+      var banner1="";
+      var banner2="";
+      var banner3="";
       if(j==1){
+        banner1="img/index/banner1.jpg"
+        banner2="img/index/banner2.jpg"
+        banner3="img/index/banner3.jpg"
         var span="新";
         var p="书推荐";
         var title="新书热卖榜";
@@ -39,6 +45,9 @@ axios.get(url).then((function (response) {
         var title="近7日畅销榜";
       }
       else if(j==3){
+        banner1="img/index/banner7.jpg"
+        banner2="img/index/banner8.jpg"
+        banner3="img/index/banner9.jpg"
         var span="畅";
         var p="销";
         var title="电子书榜";
@@ -51,6 +60,9 @@ axios.get(url).then((function (response) {
         var p="子书";
         var title="";
       }else if(j==6){
+        banner1="img/index/banner16.jpg"
+        banner2="img/index/banner17.jpg"
+        banner3="img/index/banner18.jpg"
         var span="热";
         var p="门";
         var title="精彩专题";
@@ -62,9 +74,9 @@ axios.get(url).then((function (response) {
     html_laptop1+=`
     <div class="middle">
     <div class="banner">
-    <img src="img/index/banner${(j-1)*3+1}.jpg" alt="">
-    <img src="img/index/banner${(j-1)*3+2}.jpg" alt="">
-    <img src="img/index/banner${(j-1)*3+3}.jpg" alt="">
+    <img src="${banner1}" alt="">
+    <img src="${banner2}" alt="">
+    <img src="${banner3}" alt="">
   </div>
   <div class="top_middle_title clearFloat">
       <span>${span}</span><p>${p} <a href="">更多新书戳这里</a></p>
@@ -74,6 +86,9 @@ axios.get(url).then((function (response) {
     </div>
   
   <div class="middle_laptop">
+      <div id="w_laptop${j}">
+      
+      </div>
       <div id="new_laptop${j}">
       
       </div>
@@ -90,10 +105,46 @@ axios.get(url).then((function (response) {
   </div>
     `;
   }
+  var w_laptop_html1=`<div class="top-w-laptop">
+  <p>1.</p>
+  <div>
+    <div>
+    <a href="/detail.html?lid=${data[44].lid}">
+    <img src="${data[44].lg_pic}" alt="">
+    </a>
+    </div>
+    <div class="text">
+      <p>${data[44].book_name}</p>
+      <img src="img/index/start.png" alt="">
+      <p>当当价：<span>¥${data[44].price}</span><span>市场价：¥${parseInt(data[44].price*1.6).toFixed(2)}</span></p>
+      <p>${data[44].content_introduction}</p>
+    </div>
+  </div>
+  <div class="border"></div>
+  <div>
+      <span>2.</span><span>3.</span><span>4.</span><span>5.</span><span>6.</span>
+    </div>
+  </div> `;
+  var w_laptop_html2=`<div class="top-w-laptop">
+  <p>1.</p>
+  <div>
+    <div><a href="/detail.html?lid=${data[26].lid}"><img src="${data[26].lg_pic}" alt=""></a></div>
+    <div class="text">
+      <p>${data[26].book_name}</p>
+      <img src="img/index/start.png" alt="">
+      <p>当当价：<span>¥${data[26].price}</span><span>市场价：¥${parseInt(data[26].price*1.6).toFixed(2)}</span></p>
+      <p>${data[26].content_introduction}</p>
+    </div>
+  </div>
+  <div class="border"></div>
+  <div>
+      <span>2.</span><span>3.</span><span>4.</span><span>5.</span><span>6.</span>
+    </div>
+  </div> `;
   middle_laptop1.innerHTML=html_laptop1;
     // html3
     // midddle left
-    for(let k=1;k<=7;k++){
+    for(var k=1;k<=7;k++){
       let html_middle=``;
       if(k==1){
         var start=8;
@@ -119,7 +170,6 @@ axios.get(url).then((function (response) {
       }
     for(var i=start;i<=end;i++){
       html_middle+=`
-      <div class="w-laptop"></div>
       <div class="laptop">
           <a href="/detail.html?lid=${data[i].lid}"><img src="${data[i].lg_pic}" alt=""></a>
           <p class="name"><a href="/detail.html?lid=${data[i].lid}" title="${data[i].book_name}">${data[i].book_name}</a></p>
@@ -140,8 +190,12 @@ axios.get(url).then((function (response) {
     }else if(k==5){
       new_laptop5.innerHTML=html_middle
     }else if(k==6){
+      lap=1;
+      w_laptop6.innerHTML=w_laptop_html1
       new_laptop6.innerHTML=html_middle
     }else if(k==7){
+      lap=2;
+      w_laptop7.innerHTML=w_laptop_html2
       new_laptop7.innerHTML=html_middle
     }
     
