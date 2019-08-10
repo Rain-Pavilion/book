@@ -1,6 +1,4 @@
-let host=window.location.href
-
-let url = host+'books/cquery?conditions=lid_count&num=80';
+let url ='/books/cquery?conditions=lid_count&num=80';
 axios.get(url).then((function (response) {
     let data = response.data;
     let num1=Math.floor(Math.random()*80);
