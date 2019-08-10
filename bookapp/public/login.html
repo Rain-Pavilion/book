@@ -5,34 +5,93 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/public.css">
+    <script src="js/axios.min.js"></script>
     <style>
-        body{
-            background-image: url("img/sprite/2019080618134774653.jpg");
-            background-repeat: no-repeat;
-            background-position: 50% -250%;
-        }
-
-        .index{
+        .index {
             margin-top: 12px;
             margin-bottom: 14px;
         }
 
         .click-area {
+            position: relative;
+            width: 700px;
+            height: 450px;
+            overflow: hidden;
             display: block;
-            width: 655px;
-            height: 415px;
+            float: left;
+        }
+
+        .click-area img {
+            display: block;
             position: absolute;
             z-index: 100;
-            top: 85px;
-            left: 5px;
+            left: -90%;
+            top: 20%;
             clear: both;
         }
-        .login-area{
+
+        .login-area {
             width: 362px;
             height: 457px;
-            background:yellow;
             float: right;
             margin-top: 90px;
+            box-sizing: border-box;
+            padding: 15px 25px 15px 15px;
+            margin-right: 99px;
+        }
+        .login-area h1{
+            font-size: 18px;
+        }
+        .login-area .form-group{
+            position: relative;
+        }
+        .login-area .form-group input:first-child{
+            margin-top: 20px;
+        }
+        .login-area .form-group input {
+            width: 100%;
+            height: 38px;
+            border: solid 1px #e6e6e6;
+            border-radius: 4px;
+            outline: 0;
+            vertical-align:middle;
+            padding-left: 50px;
+        }
+        .login .button{
+            text-align: center;
+            display: block;
+            width: 311px;
+            height: 44px;
+            background: #FF2832;
+            border-radius:4px;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bolder;
+            line-height: 44px;
+        }
+        .login-area .button:hover{
+            background: #f01923;
+        }
+        .login span{
+            float: right;
+        }
+        .login-area i{
+            background:url("img/sprite/icon_20150706.png") 10px -110px no-repeat;
+            width: 30px;
+            height: 36px;
+            display:inline-block;
+            top: 19px;
+            position: absolute;
+            left: -5px;
+        }
+        .login p{
+            font-size: 12px;
+        }
+        .login input[type=checkbox]{
+            vertical-align: middle;
+        }
+        .login-area p{
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -42,10 +101,33 @@
         <img src="img/sprite/logo.png">
     </div>
     <div class="logo-bg">
-        <a href="" class="click-area"></a>
+        <a href="" class="click-area">
+            <img src="img/sprite/2019080618134774653.jpg" alt="">
+        </a>
     </div>
     <div class="login-area">
+        <h1>密码登陆</h1>
+        <div class="form-group">
+            <input type="text" >
+            <i></i>
+            <p></p>
+        </div>
+        <div class="form-group">
+            <input type="password">
+            <img src="" alt="">
+            <i></i>
+            <p></p>
+        </div>
+        <div class="info">
+            <p>请点击下方图片，旋转至正确方向 <span>换一组</span></p>
+            <p>
+                <input type="checkbox">请勿在公用电脑上勾选此选项
+                <span><a href="">忘记密码</a></span>
+            </p>
+            <a href="" class="button">登陆</a>
+        </div>
     </div>
+    <script src="js/login.js"></script>
 </div>
 </body>
 </html>
