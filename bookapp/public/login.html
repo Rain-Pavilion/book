@@ -39,7 +39,19 @@
             box-sizing: border-box;
             padding: 15px 25px 15px 15px;
             margin-right: 99px;
+            border:solid 1px #e6e6e6;
+            position: relative;
         }
+
+        .login-area a.icon{
+            width: 55px;
+            height: 55px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            background-image: url("img/sprite/scan_icon.png");
+        }
+
         .login-area h1{
             font-size: 18px;
         }
@@ -57,11 +69,12 @@
             outline: 0;
             vertical-align:middle;
             padding-left: 50px;
+            box-sizing:border-box;
         }
         .login .button{
             text-align: center;
             display: block;
-            width: 311px;
+            width:100%;
             height: 44px;
             background: #FF2832;
             border-radius:4px;
@@ -87,11 +100,12 @@
         }
         .login p{
             font-size: 12px;
+            line-height: 22px;
         }
         .login input[type=checkbox]{
             vertical-align: middle;
         }
-        .login-area p{
+        .login-area .warnning,.login-area .question{
             margin-top: 30px;
         }
     </style>
@@ -108,20 +122,21 @@
     </div>
     <div class="login-area">
         <h1>密码登陆</h1>
+        <a href="" class="icon"></a>
         <div class="form-group">
             <input type="text" >
             <i></i>
-            <p></p>
+            <p>用户名输入错误</p>
         </div>
         <div class="form-group">
             <input type="password">
             <img src="" alt="">
             <i></i>
-            <p></p>
+            <p>密码输入错误</p>
         </div>
         <div class="info">
-            <p>请点击下方图片，旋转至正确方向 <span>换一组</span></p>
-            <p>
+            <p class="question">请点击下方图片，旋转至正确方向 <span>换一组</span></p>
+            <p class="warnning">
                 <input type="checkbox">请勿在公用电脑上勾选此选项
                 <span><a href="">忘记密码</a></span>
             </p>

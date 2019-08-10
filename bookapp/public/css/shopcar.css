@@ -67,6 +67,12 @@
     transition: .3s;
 }
 
+
+.block-product .product-group{
+    float: left;
+}
+
+
 .block-product .product-group li:hover .cover {
     display: block;
 }
