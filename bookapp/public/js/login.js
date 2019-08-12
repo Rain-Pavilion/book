@@ -8,10 +8,13 @@
             uname:username.value,
             upwd:password.value,
         };
-        axios.get('/users/login',{
-            params:obj,
-        }).then((response)=>{
-            console.log(response);
+        axios.post('/users/login',obj).then((response)=>{
+            console.log(response.data.code);
+            if(response.data.code==200){
+                location.href=('/');
+            }else{
+                alert("账号密码错误");
+            }
         })
     };
 })(window);
