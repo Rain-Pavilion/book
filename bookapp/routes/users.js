@@ -9,7 +9,7 @@ router.get('/login', function(req, res, next) {
         values=[uname,upwd];
     pool.query(sql,values,(error,result)=>{
         if(error)throw error;
-        let info=result.rowsAffected>0?{code:200,msg:'sucess'}:{code:201,msg:'faied'};
+        let info=result.length>0?{code:200,msg:'sucess'}:{code:201,msg:'faied'};
         res.send(info);
     })
 });
