@@ -9,11 +9,11 @@
             upwd:password.value,
         };
         axios.post('/users/login',obj).then((response)=>{
-            console.log(response.data.code);
             if(response.data.code==200){
                 location.href=('/');
             }else{
-                alert("账号密码错误");
+                var alert=document.getElementById("alert");
+                alert.style.display="block";
             }
         })
     };
