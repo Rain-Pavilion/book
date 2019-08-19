@@ -8,10 +8,13 @@
             uname:username.value,
             upwd:password.value,
         };
-        axios.get('/users/login',{
-            params:obj,
-        }).then((response)=>{
-            console.log(response);
+        axios.post('/users/login',obj).then((response)=>{
+            if(response.data.code==200){
+                location.href=('/');
+            }else{
+                var alert=document.getElementById("alert");
+                alert.style.display="block";
+            }
         })
     };
 })(window);
