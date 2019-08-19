@@ -490,5 +490,119 @@ float:right;
 } 
 /* print结束了 */
 
+/* 评论开始了 */
+.discuss{
+    width: 970px;
+    height: 166px;
+    background-color:#FAFAFA;
+    float:right;
+    margin-top:20px;
+}
+.discuss .discussTwo{
+    width: 930px;
+    margin:0 auto;
+}
+.discuss .discuss_title{
+    font-size:14px;
+    font-weight:bold;
+    margin-top:10px;
+}
+ .discussTwo ul li>span{
+   font-weight:bold;
+}
+.discussTwo ul{
+    margin-left:10px;
+}
+.discussTwo ul li{
+    margin-top:8px;
+}
+
+.h3Tit{
+    width: 970px;
+    height: 35px;
+    float:right;
+    background-color: #F0F0F0;
+    margin-top:20px;
+}
+.h3Tit span{
+    line-height:35px;
+    font-size:15px;
+    color:#787878;
+    margin-left:20px;
+}
+.h3Tit div{
+    float:right;
+    background-color: red;
+    margin-top:3px;
+    height: 26px;
+}
+
+.discussAll{
+    width: 970px;
+    float:right;
+}
+.discussAll_title{
+    height: 35px;
+    background-color: #F0F0F0;
+}
+.discussAll_title span{
+    margin:0 15px 0 20px;
+    font-size:12px;
+    line-height:35px;
+}
+.discussAll_title span:hover{
+    color:red;
+}
+.discussAll_title span:first-child{
+    color:red;
+}
+.discussAll .firstDiscuss{
+    width: 950px;
+    height: 257px;
+    margin:0 auto;
+}
+.discussAll .firstDiscuss .firstDiscuss_one{
+    width: 805px;
+    height: 257px;
+    float:left;
+}
+.discussAll .firstDiscuss .firstDiscuss_two{
+    width: 145px;
+    height: 257px;
+    float:right;
+}
+.firstDiscuss_one .one_star{
+    margin-top:15px;
+}
+.firstDiscuss_one a{
+    display:inline-block;
+    height: 37px;
+    overflow:hidden;
+    color:#646464;
+    line-height:20px;
+    margin-top:10px;
+}
+.firstDiscuss_one a:hover{
+    color:#646464;
+}
+.firstDiscuss_one .two_img{
+margin-top:10px;
+}
+.firstDiscuss_one .three_time span{
+    margin-right:10px;
+}
+.firstDiscuss_one .three_time{
+    margin-top:10px;
+}
+.firstDiscuss_two img{
+    width: 90px;
+    height: 105px;
+    margin:20px 0 0 20px;
+}
+.firstDiscuss{
+    border-bottom:1px solid #E6E6E6;
+}
+/* 评论结束了 */
+
 
 

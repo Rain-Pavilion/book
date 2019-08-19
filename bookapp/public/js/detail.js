@@ -57,6 +57,33 @@ $("#produce").html(html);
      $(this).attr("data-target")
      $("img.my_big").attr("src",$(this).attr("data-target"));
     })
+
+
+   var father="";
+   for(var i=1;i<=10;i++){
+    father+=`<div class="firstDiscuss clearFloat">
+    <div class="firstDiscuss_one">
+        <div class="one_star">
+            <img src="img/detail/fullstar.png" alt="">
+        </div>
+        <a href="">混子哥真有才，居然能把唐诗发展史、诗的流派和诗人生平通过漫画的形式表现出来，古代诗歌就好比现在的流行音乐，记录和抒发情感，在了解诗人生平后则更能读懂每首诗的深意。文末还有彩蛋——高考古诗词鉴赏[憨笑]，非常精妙，果然很棒[强]</a>
+        <div class="two_img">
+            <img src="img/detail/pinglun.jpg" alt="">
+        </div>
+        <div class="three_time">
+            <span>2019-06-15 21:25:16已购
+                </span>
+            <span>
+                <img src="img/detail/goumaipinglun.png" alt="">
+            </span>
+        </div>
+    </div>
+    <div class="firstDiscuss_two">
+        <img src="img/detail/right_header.png" alt="">
+    </div>
+</div>`;
+   }
+   $("#pinglun_father").html(father);
 })();
 
 
