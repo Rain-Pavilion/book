@@ -29,7 +29,9 @@ router.get('/add',function (req,res,next) {
     })
 });
 
+router.get('/query',function (req,res,next) {
 
+});
 
 
 module.exports = router;
