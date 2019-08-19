@@ -55,3 +55,12 @@ html {
   width: 100%;
   height: 418px;
 }
+
+.f-r{
+    float: right !important;
+}
+
+.f-l{
+    float: left;!important;
+}
+
