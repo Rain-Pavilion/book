@@ -470,7 +470,6 @@ float:right;
 }
 .little_logo{
     width: 860px;
-    background-color: red;
 }
 .little_logo span{
     float:right;
@@ -482,7 +481,6 @@ float:right;
 
 .bigphoto{
     width: 860px;
-    background-color: blue;
     padding-top:1px;
 }
 .bigphoto1{
