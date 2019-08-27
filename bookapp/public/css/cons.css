@@ -100,6 +100,11 @@
 .my_xq{
     width:760px;
 }
+.my_xq .my_name{
+    display: block;
+    height: 18px;
+    overflow: hidden;
+}
 .my_xq a{
     font-size:14px;
     color:#1a66b3;
@@ -155,6 +160,8 @@
     line-height: 14px;
 }
 .my_js{
+    height: 45px;
+    overflow: hidden;
     font-size:14px;
     color:#333;
 }
