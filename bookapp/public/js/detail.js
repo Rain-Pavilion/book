@@ -13,9 +13,9 @@
             }
             $(".detail_left_big").html(`<img src="${result.lg_pic}"  class="my_big">`)
 
-            $(".detail_center>h1").html(`<img src="img/detail/icon_ddzy.png" alt="">${result.title}`);
+            $(".detail_center>h1").html(`<img src="img/detail/icon_ddzy.png" alt="">${result.book_name==null?"":result.book_name}`);
 
-            $(".detail_center>h2>span").html(`${result.content_introduction}`);
+            $(".detail_center>h2>span").html(`${result.title==null?"":result.title}`);
         }
     };
     xhr.open("get",`/books/query${location.search}`,true);
