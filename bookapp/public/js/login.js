@@ -16,7 +16,10 @@ function setCookie(cname, cvalue, exdays) {
         };
         axios.post('/users/login',obj).then((response)=>{
             if(response.data.code==200){
-                setCookie("uname",username.value,1)
+                var usermsg=response.data.msg[0].uid
+                +"&"+username.value
+                console.log(usermsg)
+                setCookie("usermsg",usermsg,1)
                 location.href=('/');
             }else{
                 var alert=document.getElementById("alert");

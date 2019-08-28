@@ -81,10 +81,12 @@
   }
   return "";
 }
+var uid = getCookie("usermsg").split("&")[0];
+console.log(uid)
 function checkCookie() {
-    var user = getCookie("uname");
+    var user = getCookie("usermsg");
     if (user != "") {
-        $("#welcome").html(`<span style='color:red;font-weight:700'>Hi! ${user}!</span> 欢迎回来当当`)
+        $("#welcome").html(`<span style='color:red;font-weight:700'>Hi! ${user.split("&")[1]}!</span> 欢迎回来当当`)
     } else {
         $("#welcome").html("欢迎光临当当，请 ")
     }
