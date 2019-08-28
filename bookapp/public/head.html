@@ -19,7 +19,7 @@
             </div>
             <div class="r-nav">
                 <div class="login-moudel">
-                    <span id="welcome">欢迎光临当当，请</span> <a href="/login.html">登录</a>成为会员
+                    <span id="welcome">欢迎光临当当，请</span> <a href="/login.html" style="color: red">登录&nbsp;</a>成为会员
                 </div>
                 <ul class="server-list">
                     <li>购物车0 <i class="arrow"></i></li>
@@ -84,7 +84,7 @@
 function checkCookie() {
     var user = getCookie("uname");
     if (user != "") {
-        $("#welcome").html(`<span style='color:red'>Hi! ${user}! 欢迎回来当当`)
+        $("#welcome").html(`<span style='color:red;font-weight:700'>Hi! ${user}!</span> 欢迎回来当当`)
     } else {
         $("#welcome").html("欢迎光临当当，请 ")
     }
