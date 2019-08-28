@@ -1,3 +1,9 @@
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 (function () {
     var username=document.querySelector('input[type=text]'),
     password=document.querySelector('input[type=password]');
@@ -10,6 +16,7 @@
         };
         axios.post('/users/login',obj).then((response)=>{
             if(response.data.code==200){
+                setCookie("uname",username.value,1)
                 location.href=('/');
             }else{
                 var alert=document.getElementById("alert");
