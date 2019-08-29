@@ -8,9 +8,24 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var booksRouter=require('./routes/books');
 var carRouter=require('./routes/car');
+var session=require('express-session');
 
 var app = express();
 
+
+app.use(cookieParser());
+app.use(session({
+        secret:'我是地球人',
+    /////////////////////
+        resave:true,
+    //////////////////////
+        saveUninitialized:true,
+        cookie:{
+            maxAge:60*24*5*60*1000,
+            secure:false,
+        }
+    }
+));
 // view engine setup
 app.use(logger('dev'));
 app.use(express.json());
