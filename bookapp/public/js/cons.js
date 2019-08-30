@@ -30,7 +30,7 @@ $(function () {
                 </p>
                 <p class="my_js">${result[i].author_introduction==null?"":result[i].author_introduction.substr(0,105)+"...."}</p>
                 <p class="my_sc">
-                    <a class="my_sc_1" href="">加入购物车</a>
+                    <a class="my_sc_1 AddCart" href="javascript:;" data-lid="${result[i].lid}">加入购物车</a>
                     <a class="my_sc_2" href="">收藏</a>
                 </p>
             </div>
@@ -42,7 +42,16 @@ $(function () {
         $(html).appendTo($("#main"))
       }else{
         $("<h1 style='color:red;text-align:center;margin:100px 0px'>未找到相关商品....</h1>").appendTo($("#main"))
-      }
+      } 
+      $('.my_sc_1.AddCart').click(function (e) {
+        axios.get('/cart/addCart',{
+            params:{
+                lid:e.target.dataset.lid
+            }
+        }).then((response)=>{
+            alert(response.data.msg);
+        })
+      })  
     }
   });
 })
