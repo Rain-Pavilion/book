@@ -27,7 +27,7 @@ $(function () {
                     <span class="my_mj_1">当当自营</span>
                     <span class="my_mj_2">每满100-50</span>
                 </p>
-                <p class="my_js">${result[i].author_introduction==null?"":result[i].author_introduction}</p>
+                <p class="my_js">${result[i].author_introduction==null?"":result[i].author_introduction.substr(0,105)+"...."}</p>
                 <p class="my_sc">
                     <a class="my_sc_1" href="">加入购物车</a>
                     <a class="my_sc_2" href="">收藏</a>
