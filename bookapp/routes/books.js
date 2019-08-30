@@ -25,15 +25,31 @@ router.get('/cquery', function (req, res, next) {
 
 router.get('/search', function (req, res, next) {
     let keyword = req.query.keyword;
-    console.log(keyword)
-        sql = `SELECT * FROM book_laptop WHERE (book_name LIKE "%${keyword}%") or(author like 
-    "%${keyword}%") or(title like 
-        "%${keyword}%")
-        `;
-    pool.query(sql, function (error, result) {
+    var pno = req.query.pno;
+    var ps  = 10;
+    if(!pno){
+        pno = 1;
+      }
+      pno = (pno-1)*ps;//起始记录数 ?
+      ps = parseInt(ps);
+   pool.query(`SELECT * FROM book_laptop WHERE (book_name LIKE "%${keyword}%") or(author like 
+        "%${keyword}%") or(title like 
+            "%${keyword}%")`,function (error, result) {
         if (error) throw error;
-        res.send(result);
+        var pnos=Math.ceil(result.length/10);
+        sql = `SELECT * FROM book_laptop WHERE (book_name LIKE "%${keyword}%") or(author like 
+            "%${keyword}%") or(title like 
+                "%${keyword}%") LIMIT ?,?
+                `;
+        pool.query(sql,[pno,ps],function (error, result) {
+            if (error) throw error;
+            // result=result.push(pnos);
+            result={data:result,pnos:pnos}
+            console.log(result)
+            res.send(result);
+        })
     })
+   
 });
 
 
