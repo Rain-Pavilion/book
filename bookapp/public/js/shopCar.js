@@ -28,13 +28,7 @@
                         lid:$(this).parent().children('.index').attr('href').split('=')[1]
                     }
                 }).then((response)=>{
-                    if(response.data.code===0){
-                        alert('请先登录')
-                    }else if(response.data.code===200){
-                        alert('添加成功')
-                    }else{
-                        alert('添加购物车失败')
-                    }
+                    console.log(response.data.msg);
                 })
             })
         })
