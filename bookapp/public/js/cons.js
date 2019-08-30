@@ -41,7 +41,7 @@ $(function () {
           }
         $(html).appendTo($("#main"))
       }else{
-        $("<h1 style='color:red;text-align:center;margin:100px 0px'>未找到相关商品....</h1>").appendTo($("#main"))
+        $("<h2 style='color:black;text-align:center;margin:100px 0px'>未找到相关商品....</h2>").appendTo($("#main"))
       } 
       $('.my_sc_1.AddCart').click(function (e) {
         axios.get('/cart/addCart',{
