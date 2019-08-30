@@ -1,7 +1,7 @@
 $(function () {
   $.ajax({
     type: "get",
-    url: "/books/cquery?conditions=lid_count&num=80",
+    url: `/books/search${location.search}`,
     data: "",
     dataType: "json",
     success: function (result) {

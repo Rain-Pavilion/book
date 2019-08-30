@@ -24,11 +24,12 @@ router.get('/cquery', function (req, res, next) {
 });
 
 router.get('/search', function (req, res, next) {
-    let keyword = req.query.keyword,
+    let keyword = req.query.keyword;
+    console.log(keyword)
         sql = `SELECT * FROM book_laptop WHERE (book_name LIKE "%${keyword}%") or(author like 
-    "%${keyword}%"
-)
-`;
+    "%${keyword}%") or(title like 
+        "%${keyword}%")
+        `;
     pool.query(sql, function (error, result) {
         if (error) throw error;
         res.send(result);
