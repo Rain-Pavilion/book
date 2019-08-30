@@ -28,9 +28,12 @@
                         lid:$(this).parent().children('.index').attr('href').split('=')[1]
                     }
                 }).then((response)=>{
-                    console.log(response.data.msg);
+                    alert(response.data.msg);
                 })
             })
         })
     }
+    axios.get('/users/session_data').then(function (response) {
+        
+    })
 }());
