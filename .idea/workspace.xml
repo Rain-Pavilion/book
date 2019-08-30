@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6730f955-f29f-42ae-a51e-ba5e6e1e447e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/public/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/public/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/routes/users.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,17 +33,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bookapp/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,31 +59,31 @@
         <option value="$PROJECT_DIR$/bookapp/public/footer.html" />
         <option value="$PROJECT_DIR$/bookapp/public/plubic.css" />
         <option value="$PROJECT_DIR$/bookapp/public/css/head.css" />
-        <option value="$PROJECT_DIR$/bookapp/bin/www" />
         <option value="$PROJECT_DIR$/bookapp/public/js/404.html" />
-        <option value="$PROJECT_DIR$/bookapp/public/head.html" />
         <option value="$PROJECT_DIR$/bookapp/public/404.html" />
         <option value="$PROJECT_DIR$/bookapp/public/js/login.html" />
         <option value="$PROJECT_DIR$/bookapp/public/detail.html" />
         <option value="$PROJECT_DIR$/bookapp/public/js/er.js" />
-        <option value="$PROJECT_DIR$/bookapp/routes/users.js" />
         <option value="$PROJECT_DIR$/bookapp/public/css/index.css" />
         <option value="$PROJECT_DIR$/../lunbotu/test.html" />
         <option value="$PROJECT_DIR$/bookapp/public/index.html" />
         <option value="$PROJECT_DIR$/bookapp/public/js/index.js" />
         <option value="$USER_HOME$/AppData/Local/Temp/HZ$D.638.3925/4_door.html" />
         <option value="$PROJECT_DIR$/bookapp/public/js/detail.js" />
-        <option value="$PROJECT_DIR$/bookapp/public/js/login.js" />
         <option value="$PROJECT_DIR$/bookapp/public/css/shopcar.css" />
         <option value="$PROJECT_DIR$/bookapp/public/shopcar.html" />
         <option value="$PROJECT_DIR$/bookapp/routes/books.js" />
-        <option value="$PROJECT_DIR$/bookapp/public/login.html" />
         <option value="$PROJECT_DIR$/bookapp/public/js/test.html" />
         <option value="$PROJECT_DIR$/bookapp/routes/car.js" />
         <option value="$PROJECT_DIR$/bookapp/public/css/public.css" />
         <option value="$PROJECT_DIR$/bookapp/public/test.html" />
         <option value="$PROJECT_DIR$/bookapp/package.json" />
         <option value="$PROJECT_DIR$/bookapp/app.js" />
+        <option value="$PROJECT_DIR$/bookapp/routes/users.js" />
+        <option value="$PROJECT_DIR$/bookapp/public/login.html" />
+        <option value="$PROJECT_DIR$/bookapp/public/js/login.js" />
+        <option value="$PROJECT_DIR$/bookapp/bin/www" />
+        <option value="$PROJECT_DIR$/bookapp/public/head.html" />
       </list>
     </option>
   </component>
@@ -106,6 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,11 +112,22 @@
               <item name="book" type="462c0819:PsiDirectoryNode" />
               <item name="bookapp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="bookapp" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="bookapp" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -160,7 +165,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Node.js.www">
     <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/book/bookapp/public/test.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -185,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="Node.js.www" />
+        <item itemvalue="Node.js.users.js" />
+        <item itemvalue="npm.start" />
         <item itemvalue="Node.js.books.js" />
         <item itemvalue="JavaScript Debug.test.html" />
-        <item itemvalue="Node.js.users.js" />
       </list>
     </recent_temporary>
   </component>
@@ -225,11 +230,13 @@
       <workItem from="1566003711305" duration="23368000" />
       <workItem from="1566220033846" duration="812000" />
       <workItem from="1567070195664" duration="396000" />
+      <workItem from="1567072676588" duration="1406000" />
+      <workItem from="1567129879951" duration="3979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148543000" />
+    <option name="totallyTimeSpent" value="153928000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -242,7 +249,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1294" height="934" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -255,10 +261,10 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.49625936" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.3990025" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.45012468" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="11" weight="0.49625936" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32917705" />
       <window_info anchor="right" id="SciView" order="0" weight="0.32928804" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -274,13 +280,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bookapp/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/public/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1995" />
@@ -333,23 +332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2938">
           <caret line="113" column="72" lean-forward="true" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/public/js/axios.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="525" column="34" selection-start-line="525" selection-start-column="34" selection-end-line="525" selection-end-column="34" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/public/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="937">
-          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -411,13 +393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="83" column="35" lean-forward="true" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/public/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -486,22 +461,8 @@
     <entry file="file://$PROJECT_DIR$/bookapp/public/img/sprite/scan_icon.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/public/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/public/shopcar.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -520,29 +481,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/routes/books.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="77" column="1" lean-forward="true" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/public/img/sprite/21052000-1_m.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/routes/car.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/public/test.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -558,10 +498,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/routes/books.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/routes/car.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/container.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/public/js/axios.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="516" column="24" selection-start-line="516" selection-start-column="23" selection-end-line="516" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/public/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/public/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/public/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="83" column="18" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        <state relative-caret-position="217">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>

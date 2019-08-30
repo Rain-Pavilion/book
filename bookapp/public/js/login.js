@@ -14,12 +14,13 @@ function setCookie(cname, cvalue, exdays) {
             uname:username.value,
             upwd:password.value,
         };
+        axios.defaults.withCredentials=true;
         axios.post('/users/login',obj).then((response)=>{
             if(response.data.code==200){
                 var usermsg=response.data.msg[0].uid
-                +"&"+username.value
-                console.log(usermsg)
-                setCookie("usermsg",usermsg,1)
+                +"&"+username.value;
+                console.log(usermsg);
+                setCookie("usermsg",usermsg,1);
                 location.href=('/');
             }else{
                 var alert=document.getElementById("alert");

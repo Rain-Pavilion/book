@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <base target="_parent" />
+    <base target="_parent"/>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/public.css">
     <link rel="stylesheet" href="./css/head.css">
     <script src="js/jquery.min.js"></script>
+    <script src="js/axios.min.js"></script>
 
 </head>
-<body> 
+<body>
 <header>
     <div class="top-banner">
         <div class="my-container center-between">
@@ -19,7 +20,7 @@
             </div>
             <div class="r-nav">
                 <div class="login-moudel">
-                    <span id="welcome">欢迎光临当当，请</span> <a href="/login.html" style="color: red">登录&nbsp;</a>成为会员
+                    <span id="welcome">欢迎光临当当，请</span>
                 </div>
                 <ul class="server-list">
                     <li>购物车0 <i class="arrow"></i></li>
@@ -44,54 +45,43 @@
                 </a>
             </div>
             <div class="shop-car-service">
-                <a href="/shopcar.html" class="car" >购物车</a>
+                <a href="/shopcar.html" class="car">购物车</a>
                 <a href="" class="shop">我的订单</a>
             </div>
         </div>
         <div class="service-section">
             <ul class="my-container">
                 <li class="section-header"><a>全部商品分类</a></li>
-                <li >图书</li>
-                <li >电子书</li>
-                <li >网络文学</li>
-                <li >GAP</li>
-                <li >运动户外</li>
-                <li >孕婴童</li>
-                <li >家居</li>
-                <li >当当优品</li>
-                <li >食品</li>
-                <li >Apple</li>
-                <li >电器城</li>
+                <li>图书</li>
+                <li>电子书</li>
+                <li>网络文学</li>
+                <li>GAP</li>
+                <li>运动户外</li>
+                <li>孕婴童</li>
+                <li>家居</li>
+                <li>当当优品</li>
+                <li>食品</li>
+                <li>Apple</li>
+                <li>电器城</li>
             </ul>
         </div>
     </div>
 </header>
 <script>
-    function getCookie(cname) {
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-       }
-      if (c.indexOf(name)  == 0) {
-          return c.substring(name.length, c.length);
-       }
-  }
-  return "";
-}
-var uid = getCookie("usermsg").split("&")[0];
-console.log(uid)
-function checkCookie() {
-    var user = getCookie("usermsg");
-    if (user != "") {
-        $("#welcome").html(`<span style='color:red;font-weight:700'>Hi! ${user.split("&")[1]}!</span> 欢迎回来当当`)
-    } else {
-        $("#welcome").html("欢迎光临当当，请 ")
+    function checkSession() {
+        axios.get('/users/session_data')
+            .then(function (response) {
+                var user = response.data.uname;
+                if (user) {
+                    $("#welcome").html(`<span style='color:red;font-weight:700'>Hi! ${user}!</span> 欢迎回来当当
+                        <a style="color:#f01923 " href="/users/logou">退出</a>
+                    `)
+                } else {
+                    $("#welcome").html("欢迎光临当当，请"+'<a style="color: #f01923;" href="/login.html" >登陆</a>');
+                }
+            })
     }
-}
-checkCookie();
+    checkSession()
 </script>
 </body>
 </html>
