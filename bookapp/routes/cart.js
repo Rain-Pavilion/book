@@ -21,10 +21,11 @@ router.get('/addCart',function (req,res,next) {
             product_id:lid,
         };
         values=[obj];
+        console.log(obj);
         sql='insert into book_shoppingcart_item set ?';
     pool.query(sql,values,function (error, result) {
         if(error)throw error;
-        let info=result.rowsAffected>0?{code:200,msg:'sucess'}:{code:201,msg:'faied'};
+        let info=result.affectedRows>0?{code:200,msg:'sucess'}:{code:201,msg:'faied'};
         res.send(info);
     })
 });

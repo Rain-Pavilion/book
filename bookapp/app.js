@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var booksRouter=require('./routes/books');
-var carRouter=require('./routes/car');
+var cartRouter=require('./routes/cart');
 var session=require('express-session');
 
 var app = express();
@@ -33,10 +33,26 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use((req,res,next)=>{
+    if(req.url.toLowerCase().indexOf('cart')!==-1){
+        if(req.session.uid){
+           return next();
+        }else{
+          return res.send({code:0,msg:'请先登录'})
+        }
+    }
+    next();
+});
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books',booksRouter);
-app.use('/car',carRouter);
+app.use('/cart',cartRouter);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
