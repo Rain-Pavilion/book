@@ -5,6 +5,7 @@ $(function () {
     data: "",
     dataType: "json",
     success: function (result) {
+      if(result.length>0){
       let html="";
       for(var i=0;i<result.length;i++){
         html+=`
@@ -37,8 +38,11 @@ $(function () {
     </div>
     </div>
         `;
+          }
+        $(html).appendTo($("#main"))
+      }else{
+        $("<h1 style='color:red;text-align:center;margin:100px 0px'>未找到相关商品</h1>").appendTo($("#main"))
       }
-      $(html).appendTo($("#main"))
     }
   });
 })

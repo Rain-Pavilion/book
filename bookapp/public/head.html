@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./css/head.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/axios.min.js"></script>
-
 </head>
 <body>
 <header>
@@ -41,7 +40,7 @@
             <img src="img/sprite/DDlogoNEW.gif" alt="">
             <div class="search-module">
                 <input type="text" class="text" id="search">
-                <a href="./cons.html" class="button">
+                <a href="javascript:;" onclick="searchOf()" class="button">
                 </a>
             </div>
             <div class="shop-car-service">
@@ -68,7 +67,11 @@
     </div>
 </header>
 <script>
-    function checkSession() {
+    function searchOf() {
+        var keyword=$("#search").val();
+        window.open(`/cons.html?keyword=${keyword}`,"_blank")
+      }
+function checkSession() {
         axios.get('/users/session_data')
             .then(function (response) {
                 var user = response.data.uname;
@@ -80,14 +83,15 @@
                     $("#welcome").html("欢迎光临当当，请"+'<a style="color: #f01923;" href="/login.html" >登陆</a>');
                 }
             })
-    }
-    checkSession()
+}
+checkSession()
 $("#search").keydown(function(e){
   if(e.keyCode==13){
     var keyword=$(e.target).val();
     window.open(`/cons.html?keyword=${keyword}`,"_blank")
   }
 })
+
 </script>
 </body>
 </html>
