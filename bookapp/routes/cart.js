@@ -4,14 +4,22 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/queryCart', function (req, res, next) {
-    let iid = req.query.iid,
-        values = [iid],
-        sql = 'select * from book_shoppingcart_item where iid=?';
+    let user_id=parseInt(req.query.user_id),
+        values = [user_id],
+        sql = `select price,title,sm_pic from book_shoppingcart_item LEFT JOIN book_laptop on lid=product_id where user_id=?
+ `;
     pool.query(sql, values, function (error, result) {
         if (error) throw error;
         res.send(result);
     })
 });
+
+
+router.get('/removeCart',function (req, res, next){
+
+    }
+);
+
 
 router.get('/addCart', function (req, res, next) {
     let lid = req.query.lid,
