@@ -1,15 +1,19 @@
+#laptop{
+    margin-bottom: 100px;
+}
 #nav .btn{
     width: 70px;
     height: 40px;
 }
+
 #nav{
     position: relative;
     height: 130px;
 }
 #nav .btn-group{
     position: absolute;
-    right: 96px;
-    margin-bottom: 100px;
+    left: 96px;
+    margin-top: 50px;
     clear: both;
 }
 .c1{

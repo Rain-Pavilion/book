@@ -33,13 +33,23 @@ var dom=function(result){
   </div>
       `;
         }
-      $("#main").html(html);
+      $("#laptop").html(html);
     }else{
       $("<h2 style='color:black;text-align:center;margin:100px 0px'>未找到相关商品....</h2>").appendTo($("#main"));
       var $nav="";
       $("#nav").html($nav)
     } 
-      
+   // 添加购物车鼠标点击事件
+   $('.my_sc_1.AddCart').click(function (e) {
+    axios.get('/cart/addCart',{
+        params:{
+            lid:e.target.dataset.lid
+        }
+    }).then((response)=>{
+        alert(response.data.msg);
+    })
+  })
+     
 }
   var keyword=decodeURI(location.search.split("?")[1].split("=")[1]);
   var search=
@@ -63,16 +73,6 @@ var dom=function(result){
     $("#nav").html(navHtml)
     //渲染商品
     dom(result);
-    // 添加购物车鼠标点击事件
-    $('.my_sc_1.AddCart').click(function (e) {
-      axios.get('/cart/addCart',{
-          params:{
-              lid:e.target.dataset.lid
-          }
-      }).then((response)=>{
-          alert(response.data.msg);
-      })
-    })
     
     }
   });
