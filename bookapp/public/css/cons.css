@@ -1,3 +1,21 @@
+#laptop{
+    margin-bottom: 100px;
+}
+#nav .btn{
+    width: 70px;
+    height: 40px;
+}
+
+#nav{
+    position: relative;
+    height: 130px;
+}
+#nav .btn-group{
+    position: absolute;
+    left: 96px;
+    margin-top: 50px;
+    clear: both;
+}
 .c1{
     display: flex;
     justify-content:center;
