@@ -1,3 +1,10 @@
+#nav .btn{
+    width: 70px;
+    height: 40px;
+}
+#nav .btn-group{
+    margin: 0 385px 100px;
+}
 .c1{
     display: flex;
     justify-content:center;
