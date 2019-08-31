@@ -2,8 +2,15 @@
     width: 70px;
     height: 40px;
 }
+#nav{
+    position: relative;
+    height: 130px;
+}
 #nav .btn-group{
-    margin: 0 385px 100px;
+    position: absolute;
+    right: 96px;
+    margin-bottom: 100px;
+    clear: both;
 }
 .c1{
     display: flex;
