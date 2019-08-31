@@ -66,11 +66,12 @@ var dom=function(result){
     var navHtml=`<div class="btn-group btn-group-sm">
     <button class="btn btn-info btn-lg" style="background-color:#ddd;cursor:not-allowed">上一页</button>`;
     for(let i=1;i<=pnos;i++){
-      navHtml+=`<button class="btn btn-info btn-lg">${i}</button>`
+      navHtml+=`<button class="btn btn-info btn-lg numbtn">${i}</button>`
     }
     navHtml+=`<button class="btn btn-info btn-lg">下一页</button>
     </div>`
     $("#nav").html(navHtml)
+    $(`#nav button.numbtn:eq(0)`).css({'background-color':'#28a745'})
     //渲染商品
     dom(result);
     
@@ -112,4 +113,6 @@ $("#nav").on("click","button",function(e){
   }else{
     $("#nav button:last-child").css({'background-color':'#17a2b8','cursor':'pointer'})
   }
+  $(`#nav button.numbtn:eq(${pno-1})`).css({'background-color':'#28a745'})
+  $(`#nav button.numbtn:not(:eq(${pno-1}))`).css({'background-color':'#17a2b8'})
 })
