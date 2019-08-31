@@ -29,6 +29,7 @@
                     }
                 }).then((response) => {
                     alert(response.data.msg);
+                    window.open("/shopcar.html","_self")
                     if (response.data.code === 0) {
                         location.href = '/'
                     }

@@ -89,7 +89,7 @@ $("#produce").html(html);
 $('.shopcar_link1').click(function (e) {
     axios.get('/cart/addCart',{
         params:{
-            lid:e.target.dataset.lid
+            lid:location.search.split("=")[1]
         }
     }).then((response)=>{
         alert(response.data.msg);
