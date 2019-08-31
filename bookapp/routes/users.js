@@ -33,6 +33,10 @@ router.post('/register',function (req,res,next) {
     res.send('send');
 });
 
-
+router.get('/logout',function (req,res,next) {
+    req.session.uid='';
+    req.session.uname='';
+    res.send({code:200,msg:'success'})
+});
 
 module.exports = router;

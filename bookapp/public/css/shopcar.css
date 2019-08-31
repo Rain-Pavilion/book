@@ -164,6 +164,15 @@
     padding: 90px 0 0 496px;
 }
 
+.shop-car-content-area{
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.shop-car-content-area.active{
+    opacity: 0;
+}
+
 .shop-car-content-area .tab-button {
     height: 38px;
     display: inline-block;
@@ -249,23 +258,23 @@
 }
 
 .shop-car-header-info .shop-section-list .f1 {
-    width: 202px;
+    width: 183px;
 }
 
 .shop-car-header-info .shop-section-list .f2 {
-    width: 335px;
+    width: 260px;
 }
 
 .shop-car-header-info .shop-section-list .f3 {
-    width: 135px;
+    width: 118px;
 }
 
 .shop-car-header-info .shop-section-list .f4 {
-    width: 112px;
+    width: 92px;
 }
 
 .shop-car-header-info .shop-section-list .f5 {
-    width: 100px;
+    width: 240px;
 }
 
 
@@ -284,7 +293,7 @@
 }
 
 .shop-car-content-area .info {
-    height: 120px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -345,6 +354,8 @@
 .shop-car-content-area .new-price {
     align-self: flex-start;
     color: #FF2832;
+    display: inline-block;
+    width:200px;
 }
 
 .shop-car-content-area .old-price {

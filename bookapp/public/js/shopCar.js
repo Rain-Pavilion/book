@@ -12,7 +12,7 @@
                 <a class="index" href="/detail.html?lid=${data[i].lid}">
                     <img src="${data[i].lg_pic}" alt="">
                     <p class="text"><a href="">${data[i].book_name}</a></p>
-                    <span class="price">¥21.60</span>
+                    <span class="price">¥${data[i].price}</span>
                     <a href="javascript:;" class="cover AddCart">加入购物车</a>
                     <a class='info'>已有<span class="comment_num">${data[i].comment_count}</span>位用户评</a>
                 </a>
@@ -29,6 +29,9 @@
                     }
                 }).then((response) => {
                     alert(response.data.msg);
+                    if (response.data.code === 0) {
+                        location.href = '/'
+                    }
                 })
             })
         })
@@ -60,7 +63,7 @@
                         <div class="shopping-ui">
                             <p class="f-l">店铺合计</p>
                             <a class="submit f-r">结算</a>
-                            <span class="price f-r">￥68.4</span>
+                            <span class="price f-r">￥0</span>
                         </div>
                       </div>
                     `);
@@ -77,18 +80,20 @@
                                         <div class="card">
                                             <a href="javascript:void(0)" class="check"></a>
                                             <img src="${current.sm_pic}" alt="">
-                                            <div class="old-price">￥${current.price}</div>
+                     
+                 
                                             <div class="info">
                                                     <p class="intro">
-                                                        ${current.title||''}
+                                                        ${current.title || ''}
          
                                                     </p>
                                                     <p>购买此商品,可享促销 <span>加价购</span></p>
-                                            </div>                                           
+                                            </div>
+                                            <div class="old-price">￥${current.price}</div>                                           
                                             <div class="input-area">
                                             <span>
                                                 <button>-</button>
-                                                <input type="text" value="1">
+                                                <input type="text" value="${current.count}">
                                                 <button>+</button>
                                             </span>
                                             </div>
@@ -96,12 +101,8 @@
                                             <div class="option">
                                                 <div>
                                                     <p><a href="javascript:;">移入收藏</a></p>
-                                                    <p><a href="javascript:;"
-                                                      onclick="(function () {
-                                                         axios.get('/cart/removeCart').then(function() {
-                                                           
-                                                         })                               
-                                                      })()"
+                                                    <p><a href="javascript:;" data-id="${current.iid}"
+            
                                                     >删除</a></p>
                                                 </div>
                                             </div>
@@ -110,10 +111,23 @@
                         }
                         return html;
                     });
-
-
                     $(function () {
 
+                        $('.shop-car-content-area .option a[data-id]').click(function () {
+                            axios.get('/cart/removeCart',
+                                {
+                                    params: {
+                                        iid: $(this).attr('data-id')
+                                    }
+                                }).then((response) => {
+                                if (response.data.code === 200) {
+                                    var target = $(this).parent().parent().parent().parent().parent().addClass('active');
+                                    setTimeout(function () {
+                                        target.remove()
+                                    }, 500)
+                                }
+                            })
+                        });
 
                         function getBookInfo() {
                             var msg = 'You Are Dead';
@@ -147,12 +161,12 @@
 
                         function getSumprice() {
                             let $sumNode = $('.ding-dang-area .shopping-ui .price'),
-                                $newPrice = $('.shop-car-content-list .new-price'),
-                                sum = 0;
+                                $newPrice = $('.shop-car-content-list .check.on').parent().children('.old-price');
+                            sum = 0;
                             $newPrice.each(function () {
                                 var $self = $(this),
-                                    count = parseInt($self.prev().children().eq(0).children().eq(1).val());
-                                sum += parseInt($self.text().slice(1)) * count;
+                                    count = parseFloat($self.parent().parent().find('.input-area input').val());
+                                sum += parseFloat($self.text().slice(1)) * count;
                                 $sumNode.text('￥' + sum.toFixed(2));
                             });
                         }
@@ -160,7 +174,7 @@
 
                         function getCountPrice(eventNode) {
                             var CountpriceNode = eventNode.parent().parent().next();
-                            var price = parseInt(eventNode.parent().parent().prev().prev().text().slice(1));
+                            var price = parseFloat(eventNode.parent().parent().parent().children('.old-price').text().slice(1));
                             var count = parseInt(eventNode.siblings('input').val());
                             CountpriceNode.text('￥' + (price * count).toFixed(2))
                         }
@@ -182,27 +196,37 @@
                                 }
                             });
 
-                        $('.check').click(function () {
-                            $(this).toggleClass('on');
-                        });
 
                         $('.shop-car-content-list .check').click(function () {
-                            if ($(this).hasClass('on')) {
-                                if (!$('.shop-car-content-list .check:not(.on)').length) {
-                                    $('.shop-section-list .check ').addClass('on');
+                            var $self = $(this);
+                            if (!$self.hasClass('on')) {
+                                $self.addClass('on');
+                                if ($('.shop-car-content-area .check:not(.on)').length === 0) {
+                                    $('.shop-section-list .check').addClass('on')
                                 }
                             } else {
+                                $self.removeClass('on');
                                 $('.shop-section-list .check').removeClass('on');
+                                if ($('.shop-car-content-area .check.on').length === 0) {
+                                    $('.shopping-ui .price').text('￥' + 0.00)
+                                }
                             }
+                            getSumprice();
                         });
 
                         $('.shop-section-list .check').click(function () {
                             var $self = $(this);
                             if ($self.hasClass('on')) {
-                                $('.check').addClass('on')
+                                $self.removeClass('on');
+                                $('.shop-car-content-list .check').removeClass('on');
+                                if ($('.shop-car-content-area .check.on').length === 0) {
+                                    $('.shopping-ui .price').text('￥' + 0.00)
+                                }
                             } else {
-                                $('.check').removeClass('on');
+                                $self.addClass('on');
+                                $('.shop-car-content-list .check').addClass('on ')
                             }
+                            getSumprice();
                         });
 
                         $('.shop-car-content-list .shop-car-content-area .info span').click(
