@@ -4,8 +4,8 @@
 #nav .btn{
     width: 70px;
     height: 40px;
+    font-size: 1.25rem;
 }
-
 #nav{
     position: relative;
     height: 130px;
