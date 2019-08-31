@@ -85,7 +85,16 @@ $("#produce").html(html);
    }
    $("#pinglun_father").html(father);
 })();
-
+// 添加购物车鼠标点击事件
+$('.shopcar_link1').click(function (e) {
+    axios.get('/cart/addCart',{
+        params:{
+            lid:e.target.dataset.lid
+        }
+    }).then((response)=>{
+        alert(response.data.msg);
+    })
+  })
 
 
 

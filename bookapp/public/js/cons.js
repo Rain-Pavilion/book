@@ -63,7 +63,7 @@ var dom=function(result){
     $("#nav").html(navHtml)
     //渲染商品
     dom(result);
-    // 添加鼠标点击事件
+    // 添加购物车鼠标点击事件
     $('.my_sc_1.AddCart').click(function (e) {
       axios.get('/cart/addCart',{
           params:{
