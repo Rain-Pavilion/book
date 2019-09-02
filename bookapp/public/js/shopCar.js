@@ -1,6 +1,7 @@
 (function () {
     var target = document.querySelectorAll('.block-product .product-group');
     var filed = ['comment_count', 'price', 'lid'];
+    var current_delete_target=null;
     for (let i = 0; i < target.length; i++) {
         var url = `/books/cquery?conditions=${filed[i]}&num=10`;
         axios.default.withCredentials = true;
@@ -29,7 +30,7 @@
                     }
                 }).then((response) => {
                     alert(response.data.msg);
-                    window.open("/shopcar.html","_self")
+                    window.open("/shopcar.html", "_self");
                     if (response.data.code === 0) {
                         location.href = '/'
                     }
@@ -112,22 +113,34 @@
                         }
                         return html;
                     });
-                    $(function () {
-
-                        $('.shop-car-content-area .option a[data-id]').click(function () {
-                            axios.get('/cart/removeCart',
-                                {
-                                    params: {
-                                        iid: $(this).attr('data-id')
-                                    }
-                                }).then((response) => {
-                                if (response.data.code === 200) {
-                                    var target = $(this).parent().parent().parent().parent().parent().addClass('active');
-                                    setTimeout(function () {
-                                        target.remove()
-                                    }, 500)
+                    $('#alert .yes').click(function () {
+                        axios.get('/cart/removeCart',
+                            {
+                                params: {
+                                    iid: current_delete_target.attr('data-id')
                                 }
-                            })
+                            }).then((response) => {
+                            if (response.data.code === 200) {
+                                var target = current_delete_target.parent().parent().parent().parent().parent().addClass('active');
+                                setTimeout(function () {
+                                    target.remove();
+                                    getSumprice();
+                                    if ($('.shop-car-content-area .check.on').length === 0) {
+                                        $('.shopping-ui .price').text('￥' + 0.00)
+                                    }
+
+                                }, 500);
+                            }
+                        });
+                        $('#alert').css('display', 'none')
+                    });
+                    $('#alert .no').click(function () {
+                        $('#alert').css('display', 'none')
+                    });
+                    $(function () {
+                        $('.shop-car-content-area .option a[data-id]').click(function () {
+                            $('#alert').css('display', 'block');
+                            current_delete_target=$(this);
                         });
 
                         function getBookInfo() {
@@ -194,6 +207,7 @@
                                     $next.val(value);
                                     getCountPrice($self);
                                     getSumprice();
+
                                 }
                             });
 

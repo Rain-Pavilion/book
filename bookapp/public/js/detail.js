@@ -35,7 +35,7 @@
         html+=`<li>
         <img src="${result[i].sm_pic}" alt="">
         <p class="prices">￥68</p>
-        <p class="name">${result[i].book_name}</p>
+        <p class="name"><a style="color: #000000;"  href="/detail.html?lid=${result[i].lid}">${result[i].book_name}</a></p>
         <p class="author">${result[i].author}</p>
     </li>`;
 }
@@ -44,19 +44,19 @@ for(var i=10;i<15;i++){
     six_books+=`<li>
     <img src="${result[i].sm_pic}" alt="">
     <p class="six_price">￥${result[i].price}</p>
-    <p class="six_name">${result[i].book_name}</p>
+    <p class="six_name"><a style="color: #000000;" href="/detail.html?lid=${result[i].lid}">${result[i].book_name}</a></p>
     <p class="six_author">${result[i].publishing}</p>
 </li>`;
 }
 $("#six_books").html(six_books);
 $("#produce").html(html);
         }
-    })
+    });
 
     $("div.detail_little").on("click","img",function(){
-     $(this).attr("data-target")
+     $(this).attr("data-target");
      $("img.my_big").attr("src",$(this).attr("data-target"));
-    })
+    });
 
 
    var father="";
