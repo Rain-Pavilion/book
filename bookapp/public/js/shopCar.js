@@ -1,76 +1,5 @@
 (function () {
-    var target = document.querySelectorAll('.block-product .product-group');
-    var filed = ['comment_count', 'price', 'lid'];
-    var current_delete_target=null;
-    for (let i = 0; i < target.length; i++) {
-        var url = `/books/cquery?conditions=${filed[i]}&num=10`;
-        axios.default.withCredentials = true;
-        axios.get(url).then((function (response) {
-            let data = response.data;
-            let html = '';
-            for (let i = 0; i < data.length; i++) {
-                html += `<li>
-                <a class="index" href="/detail.html?lid=${data[i].lid}">
-                    <img src="${data[i].lg_pic}" alt="">
-                    <p class="text"><a href="">${data[i].book_name}</a></p>
-                    <span class="price">¥${data[i].price}</span>
-                    <a href="javascript:;" class="cover AddCart">加入购物车</a>
-                    <a class='info'>已有<span class="comment_num">${data[i].comment_count}</span>位用户评</a>
-                </a>
-            </li>`
-            }
-            for (let i = 0; i < target.length; i++) {
-                target[i].innerHTML = html
-            }
-        })).then(function () {
-            $('.AddCart').click(function () {
-                axios.get('/cart/addCart', {
-                    params: {
-                        lid: $(this).parent().children('.index').attr('href').split('=')[1]
-                    }
-                }).then((response) => {
-                    alert(response.data.msg);
-                    window.open("/shopcar.html", "_self");
-                    if (response.data.code === 0) {
-                        location.href = '/'
-                    }
-                })
-            })
-        })
-    }
-    axios.get('/users/session_data').then(function (response) {
-        var target = $('.shop-car-replace-area');
-        if (response.data.uname) {
-            axios.get('/cart/queryCart', {
-                params: {
-                    user_id: response.data.uid,
-                }
-            }).then(
-                function (response) {
-                    target.html(
-                        `<div class='ding-dang-area'>
-                            <div class="shop-car-header-info">
-                                <ul class="shop-section-list">
-                                    <li class="f1"><a href='javascript:void(0)' class="check"></a>全选</li>
-                                    <li class="f2">商品信息</li>
-                                    <li class="f3">单价（元）</li>
-                                    <li class="f4">数量</li>
-                                    <li class="f5">金额（元）</li>
-                                    <li>操作</li>
-                                </ul>
-                        
-                            </div>
-                        <div class="shop-car-content-list">
-                        </div>
-                        <div class="shopping-ui">
-                            <p class="f-l">店铺合计</p>
-                            <a class="submit f-r">结算</a>
-                            <span class="price f-r">￥0</span>
-                        </div>
-                      </div>
-                    `);
-
-
+     function load(response){
                     $('.shop-car-content-list').html(function () {
                         var html = '';
                         for (let i = 0; i < response.data.length; i++) {
@@ -111,8 +40,91 @@
                                         </div>
                                    </div>`;
                         }
-                        return html;
-                    });
+                        return html
+                    })}
+
+
+
+
+
+
+
+
+
+
+
+    var target = document.querySelectorAll('.block-product .product-group');
+    var filed = ['comment_count', 'price', 'lid'];
+    var current_delete_target=null;
+    for (let i = 0; i < target.length; i++) {
+        var url = `/books/cquery?conditions=${filed[i]}&num=10`;
+        axios.default.withCredentials = true;
+        axios.get(url).then((function (response) {
+            let data = response.data;
+            let html = '';
+            for (let i = 0; i < data.length; i++) {
+                html += `<li>
+                <a class="index" href="/detail.html?lid=${data[i].lid}">
+                    <img src="${data[i].lg_pic}" alt="">
+                    <p class="text"><a href="">${data[i].book_name}</a></p>
+                    <span class="price">¥${data[i].price}</span>
+                    <a href="javascript:;" class="cover AddCart">加入购物车</a>
+                    <a class='info'>已有<span class="comment_num">${data[i].comment_count}</span>位用户评</a>
+                </a>
+            </li>`
+            }
+            for (let i = 0; i < target.length; i++) {
+                target[i].innerHTML = html
+            }
+        })).then(function () {
+            $('.AddCart').click(function () {
+                axios.get('/cart/addCart', {
+                    params: {
+                        lid: $(this).parent().children('.index').attr('href').split('=')[1]
+                    }
+                }).then((response) => {
+                    alert(response.data.msg);
+                    axios.get('/cart/queryCart').then((response)=>{load(response)});
+                    if (response.data.code === 0){
+                        location.href = '/'
+                    }
+                })
+            })
+        })
+    }
+    axios.get('/users/session_data').then(function (response) {
+        var target = $('.shop-car-replace-area');
+        if (response.data.uname) {
+            axios.get('/cart/queryCart', {
+                params: {
+                    user_id: response.data.uid,
+                }
+            }).then(
+                function (response) {
+                    target.html(
+                        `<div class='ding-dang-area'>
+                            <div class="shop-car-header-info">
+                                <ul class="shop-section-list">
+                                    <li class="f1"><a href='javascript:void(0)' class="check"></a>全选</li>
+                                    <li class="f2">商品信息</li>
+                                    <li class="f3">单价（元）</li>
+                                    <li class="f4">数量</li>
+                                    <li class="f5">金额（元）</li>
+                                    <li>操作</li>
+                                </ul>
+                        
+                            </div>
+                        <div class="shop-car-content-list">
+                        </div>
+                        <div class="shopping-ui">
+                            <p class="f-l">店铺合计</p>
+                            <a class="submit f-r">结算</a>
+                            <span class="price f-r">￥0</span>
+                        </div>
+                      </div>
+                    `);
+                    load(response);
+
                     $('#alert .yes').click(function () {
                         axios.get('/cart/removeCart',
                             {

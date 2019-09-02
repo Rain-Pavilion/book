@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6730f955-f29f-42ae-a51e-ba5e6e1e447e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/public/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/css/detail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/public/css/shopcar.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/css/shopcar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/public/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/js/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/public/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookapp/public/js/shopCar.js" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/js/shopCar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/public/shopcar.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/public/shopcar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/routes/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/routes/cart.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bookapp/public/shopcar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state relative-caret-position="164">
+              <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -101,20 +97,20 @@
         <option value="$PROJECT_DIR$/bookapp/app.js" />
         <option value="$PROJECT_DIR$/bookapp/public/test.html" />
         <option value="D:/test.html" />
-        <option value="$PROJECT_DIR$/bookapp/routes/cart.js" />
         <option value="$PROJECT_DIR$/bookapp/public/index.html" />
         <option value="$PROJECT_DIR$/bookapp/routes/users.js" />
-        <option value="$PROJECT_DIR$/bookapp/public/head.html" />
         <option value="$PROJECT_DIR$/bookapp/public/css/detail.css" />
         <option value="$PROJECT_DIR$/bookapp/public/js/detail.js" />
         <option value="$PROJECT_DIR$/bookapp/public/login.html" />
         <option value="$PROJECT_DIR$/bookapp/public/css/shopcar.css" />
-        <option value="$PROJECT_DIR$/bookapp/public/js/shopCar.js" />
         <option value="$PROJECT_DIR$/bookapp/public/shopcar.html" />
+        <option value="$PROJECT_DIR$/bookapp/public/head.html" />
+        <option value="$PROJECT_DIR$/bookapp/routes/cart.js" />
+        <option value="$PROJECT_DIR$/bookapp/public/js/shopCar.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="380" />
     <option name="y" value="270" />
     <option name="width" value="1040" />
@@ -275,12 +271,12 @@
       <workItem from="1567148351286" duration="10526000" />
       <workItem from="1567163294381" duration="14637000" />
       <workItem from="1567213422744" duration="20613000" />
-      <workItem from="1567385822507" duration="7892000" />
+      <workItem from="1567385822507" duration="11447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207596000" />
+    <option name="totallyTimeSpent" value="211151000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -504,13 +500,6 @@
     <entry file="file://$PROJECT_DIR$/bookapp/routes/pool.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/public/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -539,20 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/public/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/public/css/detail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -564,20 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2158">
           <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/public/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2704">
-          <caret line="104" column="7" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bookapp/routes/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -602,6 +563,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/public/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="92" column="10" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/public/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookapp/routes/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -611,15 +610,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/public/js/shopCar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state relative-caret-position="464">
+          <caret line="168" column="58" lean-forward="true" selection-start-line="168" selection-start-column="58" selection-end-line="168" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookapp/public/shopcar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="164">
+          <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
