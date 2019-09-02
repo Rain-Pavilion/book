@@ -1,3 +1,25 @@
+//top_search
+window.onscroll=function() {
+  var scrollTop=document.body.scrollTop || document.documentElement.scrollTop ;
+  if(scrollTop>1200){
+    top_search.style.display="block"
+  }else{
+    top_search.style.display="none"
+  }
+}
+function searchOf() {
+  var keyword=$("#search2").val();
+  window.open(`/cons.html?keyword=${keyword}`,"_self")
+}
+$("#search2").keydown(function(e){
+  if(e.keyCode==13){
+    var keyword=$(e.target).val();
+    window.open(`/cons.html?keyword=${keyword}`,"_self")
+  }
+})
+
+
+////
 let url ='/books/cquery?conditions=lid_count&num=80';
 axios.get(url).then((function (response) {
     let data = response.data;

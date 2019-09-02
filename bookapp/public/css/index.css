@@ -1,3 +1,36 @@
+#top_search {
+  height: 52px;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  display: none;
+  background-color: rgba(229,27,41,0.9);
+}
+#top_search img{
+  margin-left: 127px;
+}
+#top_search input{
+  margin-left: 80px;
+  height: 32px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  background: #fff;
+  line-height: 32px;
+  border: 0;
+  width: 700px;
+  color: #666;
+}
+#top_search i{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 9px;
+  right: 335px;
+  background: url(../img/index/home_sprite_1511.png) no-repeat 0 -250px;
+}
 .container-fluid{
   width: 1200px !important;
   margin: 0 auto;
