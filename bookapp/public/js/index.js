@@ -227,7 +227,7 @@ axios.get(url).then((function (response) {
     html_middle_li+=`
         <li class="clearFloat">
             <p><span class="num">${a}</span>${data[i].book_name}</p>
-            <a  href="/detail.html?${data[i].lid}" class="cover">
+            <a  href="/detail.html?lid=${data[i].lid}" class="cover">
                 <span class="num">${a}</span>
                 <img src="${data[i].lg_pic}" alt="">
                 <p>${data[i].book_name}</p>
