@@ -4,7 +4,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/queryCart', function (req, res, next) {
-    let user_id = parseInt(req.query.user_id),
+    let user_id =req.session.uid,
         values = [user_id],
         sql = `select price,title,sm_pic,count,iid from book_shoppingcart_item LEFT JOIN book_laptop on lid=product_id where user_id=?
  `;
