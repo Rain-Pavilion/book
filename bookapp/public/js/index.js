@@ -8,12 +8,11 @@ window.onscroll=function() {
     top_search.style.display="none"
   }
   var toTop=document.getElementById("toTop");
-  var toTop1=document.getElementById("toTop1");
   var go=function (e){
     e.preventDefault();
     var dist=scrollTop;//总距离
-    var steps=100; //总步数
-    var dura=1000; //总时间
+    var steps=50; //总步数
+    var dura=500; //总时间
     var step=dist/steps; //每步的距离
     var interval=dura/steps; //每步的时间 
     var timer= setInterval(function(){      
@@ -21,12 +20,11 @@ window.onscroll=function() {
       steps--;
       if(steps==0){
         clearInterval(timer);
-        steps=100;
+        steps=50;
       }
     },interval)
   }
   toTop.onclick=go
-  toTop1.onclick=go
 }
 function searchOf() {
   var keyword=$("#search2").val();
