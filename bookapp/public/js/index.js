@@ -12,16 +12,16 @@ window.onscroll=function() {
   var go=function (e){
     e.preventDefault();
     var dist=scrollTop;//总距离
-    var steps=50; //总步数
-    var dura=500; //总时间
+    var steps=100; //总步数
+    var dura=1000; //总时间
     var step=dist/steps; //每步的距离
-    var interval=dura/steps; //每步的时间
+    var interval=dura/steps; //每步的时间 
     var timer= setInterval(function(){      
       window.scrollBy(0,-step);
       steps--;
       if(steps==0){
         clearInterval(timer);
-        steps=50;
+        steps=100;
       }
     },interval)
   }
