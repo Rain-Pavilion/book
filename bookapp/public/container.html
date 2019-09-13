@@ -86,8 +86,8 @@
         </div>`);
         }
         $("#cprice").html(result.data[0].price)
-        $("#sprice").html(result.data[0].price*2)
-        $("#sprice1").html(result.data[0].price)
+        $("#sprice").html("￥"+result.data[0].price*2)
+        $("#sprice1").html("￥"+result.data[0].price)
         $("#buy").prop("href","/detail.html?lid="+(79+result.data[0].cid))
      })
 </script>
