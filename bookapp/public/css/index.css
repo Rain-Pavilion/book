@@ -73,10 +73,13 @@
   background-color: rgba(229,27,41,0.9);
 }
 #top_search img{
-  margin-left: 127px;
+  float: left;
+  margin-left: 9%;
 }
 #top_search input{
-  margin-left: 80px;
+  float: left;
+  margin-top: 0.7%;
+  margin-left: 8%;
   height: 32px;
   padding-left: 10px;
   font-size: 14px;
@@ -84,16 +87,15 @@
   background: #fff;
   line-height: 32px;
   border: 0;
-  width: 700px;
+  width: 704px;
   color: #666;
 }
 #top_search i{
-  display: inline-block;
   width: 32px;
   height: 32px;
-  position: absolute;
-  top: 9px;
-  right: 335px;
+  float: left;
+  margin-top: 0.7%;
+  margin-left: 0;
   background: url(../img/index/home_sprite_1511.png) no-repeat 0 -250px;
 }
 .container-fluid{
