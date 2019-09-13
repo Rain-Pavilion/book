@@ -10,36 +10,38 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/axios.min.js"></script>
     <link rel="stylesheet" href="css/container.css">
     <link rel="stylesheet" href="css/public.css">
 </head>
 <body>
     <iframe src="head.html" frameborder="0" class="header" scrolling="no"></iframe>
-    
-<div class="c1">
-    <img src="img/carousel/yuhua_w2.jpg" alt="">
-</div> 
-<div class="c1">
-    <img src="img/carousel/yuhua_o.jpg" alt="">
-</div>
-<div class="c1">
-    <img src="img/carousel/yuhua_o2.jpg" alt="">
-</div>
-<div class="c1">
-    <img src="img/carousel/yuhua_o3.jpg" alt="">
-</div>
-<div class="c1">
-    <img src="img/carousel/yuhua_lg.jpg" alt="">
-</div>
-<div class="c1">
-    <img src="img/carousel/yuhua_o4.jpg" alt="">
-</div>
-<div class="c1">
-    <img src="img/carousel/yuhua_o5.jpg" alt="">
-</div>
-<div class="c1">
-    <img src="img/carousel/yuhua_o6.jpg" alt="">
-</div>
+    <div id="lg_img">
+        <div class="c1">
+            <img src="img/carousel/yuhua_w2.jpg" alt="">
+        </div> 
+        <div class="c1">
+            <img src="img/carousel/yuhua_o.jpg" alt="">
+        </div>
+        <div class="c1">
+            <img src="img/carousel/yuhua_o2.jpg" alt="">
+        </div>
+        <div class="c1">
+            <img src="img/carousel/yuhua_o3.jpg" alt="">
+        </div>
+        <div class="c1">
+            <img src="img/carousel/yuhua_lg.jpg" alt="">
+        </div>
+        <div class="c1">
+            <img src="img/carousel/yuhua_o4.jpg" alt="">
+        </div>
+        <div class="c1">
+            <img src="img/carousel/yuhua_o5.jpg" alt="">
+        </div>
+        <div class="c1">
+            <img src="img/carousel/yuhua_o6.jpg" alt="">
+        </div> 
+    </div>
 <div class="my_c">
     <div class="my_img1">
         <a" href=""><img class="img_1" src="img/carousel/yuhua_sm.jpg" alt=""></a>
@@ -52,21 +54,21 @@
         </h4></a>
         
         <div class="price1">
-            抢购价:&nbsp;<b>￥</b><span>28</span><b>.80</b>
-            <a href="">购买</a>
+            抢购价:&nbsp;<b>￥</b><span id="cprice">28</span>
+            <a href="" id="buy">购买</a>
         </div>
         <div class="price2">
             <span class="price2_1">市场价：
                 <br>
-                <span>￥59.00</span>
+                <span id="sprice">￥59.00</span>
             </span>
             <span class="price2_1">节省：
                     <br>
-                <span>￥32.20</span>
+                <span id="sprice1">￥11.00</span>
             </span>
             <span class="price2_1">折扣：
                 <br>
-                <span>4.9折</span>
+                <span id="code">5折</span>
             </span>
             <a class="price3" href="">查看详情>></a>
         </div>
@@ -74,5 +76,20 @@
 </div>
 
 <iframe src="footer.html" frameborder="0" class="footer" scrolling="no"></iframe>
+<script>
+     axios.get("/books/carousel"+location.search).then(result=>{
+        $("img.img_1").prop("src",result.data[0].sm_pic);
+        $("h4.my_p1").html(result.data[0].title);
+        if(location.search!="?cid=2"){
+            $("#lg_img").html(`<div class="c1">
+            <img src="${result.data[0].lg_pic}" alt="">
+        </div>`);
+        }
+        $("#cprice").html(result.data[0].price)
+        $("#sprice").html(result.data[0].price*2)
+        $("#sprice1").html(result.data[0].price)
+        $("#buy").prop("href","/detail.html?lid="+(79+result.data[0].cid))
+     })
+</script>
 </body>
 </html>
