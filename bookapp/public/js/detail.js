@@ -28,7 +28,7 @@
         dataType:"json",
         success:function(result){
         var html="";
-        for(var i=0;i<17;i++){
+        for(var i=0;i<6;i++){
         html+=`<li>
         <img src="${result[i].sm_pic}" alt="">
         <p class="prices">￥68</p>
@@ -55,20 +55,24 @@ $("#produce").html(html);
      $("img.my_big").attr("src",$(this).attr("data-target"));
     });
 
-
-   var father="";
-   for(var i=1;i<=10;i++){
-    father+=`<div class="firstDiscuss clearFloat">
+//商品评论
+    axios.get("users/queryComment",{
+        params:{  
+            lid:location.search.split("=")[1]
+        }
+    }).then(result=>{         
+        var father="";
+   for(var i=0;i<result.data.length;i++){      
+            father+=`<div class="firstDiscuss clearFloat">
     <div class="firstDiscuss_one">
         <div class="one_star">
             <img src="img/detail/fullstar.png" alt="">
         </div>
-        <a href="">混子哥真有才，居然能把唐诗发展史、诗的流派和诗人生平通过漫画的形式表现出来，古代诗歌就好比现在的流行音乐，记录和抒发情感，在了解诗人生平后则更能读懂每首诗的深意。文末还有彩蛋——高考古诗词鉴赏[憨笑]，非常精妙，果然很棒[强]</a>
+        <a href="">${result.data[i].comment}</a>
         <div class="two_img">
-            <img src="img/detail/pinglun.jpg" alt="">
         </div>
         <div class="three_time">
-            <span>2019-06-15 21:25:16已购
+            <span>来自书友的评论！
                 </span>
             <span>
                 <img src="img/detail/goumaipinglun.png" alt="">
@@ -76,11 +80,18 @@ $("#produce").html(html);
         </div>
     </div>
     <div class="firstDiscuss_two">
-        <img src="img/detail/right_header.png" alt="">
+        <img src="img/detail/right_header.png" alt="">  
+            <p id="detail_uname">${result.data[i].uname}</p>
+        <button id="detail_uname">钻石用户</button>
     </div>
 </div>`;
    }
-   $("#pinglun_father").html(father);
+// console.log(father)
+$("#pinglun_father").html(father);
+        
+   
+})
+   
 })();
 // 添加购物车鼠标点击事件
 $('.shopcar_link1').click(function (e) {
@@ -142,5 +153,33 @@ $(cover).mousemove(function (e) {
     })
 });
 
-
-
+//短评
+$("#write").click(function(){
+    $("#comment").css({display:'block'})
+})
+$("#close").click(function(e){
+    e.preventDefault();
+    $("#comment").css({display:'none'})
+})
+$("#sendComment").click(function(){
+    var text=$("#text").val();
+    var lid=location.search.split("=")[1]
+    axios.get("/users/session_data").then(result=>{
+        if(result.data.uid==undefined){
+            alert("请先登录！");         
+            return;
+        }else {
+            uid = result.data.uid
+            axios.get("/users/comment",{
+                params:{
+                    lid,text
+                }
+            }).then(result=>{
+                if(result.data.code==200){
+                    alert("评论成功!");
+                    location.href="/detail.html?lid="+lid;      
+                }
+            })
+        }
+    })
+})

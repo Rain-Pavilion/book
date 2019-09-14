@@ -1,3 +1,50 @@
+/* comment */
+
+#comment { 
+    width: 488px;
+    height: 390px;
+    border: 1px solid #e6e6e6;
+    font: 12px "Microsoft Yahei";
+    color: #999;
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    display: none;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    background: #fff;
+    color: #646464;
+  }
+  #comment h2 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  #comment a {
+    font-size: 36px;
+    position: absolute;
+    top: -8px;
+    right: 5px;
+  }
+  #comment textarea {
+    height: 240px;
+    width: 408px;
+    padding: 3px 10px 0;
+    background: transparent;
+    outline: none;
+    resize: none;
+    color: #323232;
+    font: 12px/20px "Microsoft Yahei";
+  }
+  #comment button {
+    background: #f00;
+    color: white;
+    border-radius: 5px;
+    width: 90px;
+    height: 34px;
+    border: none;
+    margin: 10px 170px;
+  }
+/* comment */
 .detail_left_big {
     position: relative;
 }
@@ -593,18 +640,39 @@ float:right;
 }
 .discussAll .firstDiscuss{
     width: 950px;
-    height: 257px;
+    /* height: 257px; */
     margin:0 auto;
 }
 .discussAll .firstDiscuss .firstDiscuss_one{
     width: 805px;
-    height: 257px;
+    /* height: 257px; */
     float:left;
 }
 .discussAll .firstDiscuss .firstDiscuss_two{
     width: 145px;
-    height: 257px;
+    /* height: 257px; */
     float:right;
+}
+.discussAll .firstDiscuss .firstDiscuss_two img{
+    margin-left: 45px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.discussAll .firstDiscuss .firstDiscuss_two p{
+    text-align: center;
+    margin-top:10px;
+    width: 145px;
+    overflow: hidden;
+}
+.discussAll .firstDiscuss .firstDiscuss_two button{
+    width: 70px;
+    height: 20px;
+    margin-left: 38px;
+    color: #fff;
+    background: #bb5eea;
+    border: none;
+    border-radius: 5px;
 }
 .firstDiscuss_one .one_star{
     margin-top:15px;

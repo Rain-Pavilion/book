@@ -206,7 +206,7 @@
         </div>
         <div class="bigphoto clearFloat">
             <div class="bigphoto1">
-                <img src="img/detail/big.jpg" alt="">
+                <!-- <img src="img/detail/big.jpg" alt=""> -->
             </div>
         </div>
     </div>
@@ -227,7 +227,7 @@
 </div>
 <div class="h3Tit">
     <span>短评(68669)</span>
-    <div class="btn btn-danger">写短评，赚铃铛</div>
+    <div class="btn btn-danger" id="write">写短评，赚铃铛</div>
 </div>
 
    <div class="discussAll">
@@ -259,11 +259,20 @@
         </div>
         <div class="firstDiscuss_two">
             <img src="img/detail/right_header.png" alt="">
+            <p id="detail_uname">用户名称</p>
+            <p id="detail_uname">值是用户</p>
         </div>
     </div>
 </div>
    </div>  
     <!-- 评论结束了discuss -->
+    <div id="comment">
+            <h2>短评</h2>
+    <a href="javascript:;" id="close">×</a>
+            <p>我对本书的评价是:</p>
+            <textarea id="text" id="" cols="30" rows="10"></textarea>
+            <button id="sendComment">发表</button>
+    </div>
 </div>
 <div class="footer">
     <iframe src="footer.html" frameborder="0" class="footer" scrolling="no"></iframe>

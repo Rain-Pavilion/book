@@ -19,6 +19,37 @@ router.post('/login', function(req, res, next) {
     })
 });
 
+
+
+//用户评论
+router.get('/queryComment',function(req,res){
+    let lid = req.query.lid;
+    let sql = "select comment,uname,product_id from book_comment left join book_user on book_comment.user_id=book_user.uid where product_id=?;";
+    pool.query(sql,[lid],(err,result)=>{
+        if(err) throw err;
+        if(result.length>0){
+            res.send(result)
+        }
+    })
+})
+
+
+router.get('/comment',function(req,res){
+    let lid = req.query.lid;
+    let text = req.query.text;
+    let uid = req.session.uid;
+    let sql=`insert into book_comment (user_id,product_id,comment) values (${uid},${lid},'${text}')`;
+    console.log(sql)
+    pool.query(sql,(err,result)=>{
+        if(err) throw err;
+        if(result.affectedRows>0)
+        {
+        res.send({code:200,msg:"success"})
+        }
+    })
+})
+
+
 router.get('/session_data',function(req,res,next){
     let {uid,uname}=req.session;
     if(uid){
