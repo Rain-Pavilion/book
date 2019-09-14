@@ -11,12 +11,25 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/axios.min.js"></script>
   <link rel="stylesheet" href="css/public.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <iframe src="head.html" frameborder="0" class="header" scrolling="no"></iframe>
+  <!-- top-search -->
+  <div id="top_search">
+    <img src="img/index/dang.png" alt="">
+    <input type="text" placeholder="快乐读书吧" id="search2">
+    <i onclick="searchOf()"></i>
+  </div>
+<!-- right_nav -->
+  <div id="right_nav">
+    <a href="/shopcar.html" target="_self"><span>购物车</span></a>
+    <a href="" id="toTop" target="_self"><span>返回顶部</span></a>
+    <a href="javascript:;" target="_self"></a>
+    <a href="javascript:;" target="_self"><span>咨询小当家</span></a>
+  </div>
   <div class="container-fluid">
     <h4><a href="">图书</a>&nbsp;|&nbsp;<a href="">文学</a></h4>
   <div class="top"> 
@@ -55,22 +68,22 @@
                 <!-- 1.轮播图片 -->
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                      <a href="/container.html">
+                      <a href="/container.html?cid=1">
                           <img src="img/carousel/like_w.jpg" alt="" class="w-100">
                         </a>
                   </div>
                   <div class="carousel-item">
-                    <a href="/container.html">
+                    <a href="/container.html?cid=3">
                       <img src="img/carousel/qbs_w.jpg" alt="" class="w-100">
                     </a>
                   </div>
                   <div class="carousel-item">
-                      <a href="/container.html">
+                      <a href="/container.html?cid=2">
                           <img src="img/carousel/yuhua_w.jpg" alt="" class="w-100">
                         </a>
                   </div>
                   <div class="carousel-item">
-                      <a href="/container.html">
+                      <a href="/container.html?cid=4">
                           <img src="img/carousel/1998_w.jpg" alt="" class="w-100">
                         </a>
                   </div>

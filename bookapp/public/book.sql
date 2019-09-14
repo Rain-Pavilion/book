@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1
--- 生成日期： 2019-07-27 10:07:02
+-- 生成日期： 2019-09-13 10:12:22
 -- 服务器版本： 10.1.37-MariaDB
 -- PHP 版本： 7.3.1
 SET NAMES UTF8;
@@ -14,13 +14,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-
-
-
-
-
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -66,7 +59,7 @@ CREATE TABLE `book_index_carousel` (
 --
 
 INSERT INTO `book_index_carousel` (`cid`, `w_pic`, `lg_pic`, `sm_pic`, `title`, `price`, `href`) VALUES
-(1, 'img/carousel/like_w.jpg', 'img/carousel/like_lg.jpg', 'img/carousel/like_sm.jpg', '过自己喜欢的生活', '34.50', NULL),
+(1, 'img/carousel/like_w.jpg', 'img/carousel/like_lg.jpg', 'img/carousel/like_sm.jpg', '以自己喜欢的方式去生活', '34.50', NULL),
 (2, 'img/carousel/yuhua_w.jpg', 'img/carousel/yuhua_lg.jpg', 'img/carousel/yuhua_sm.jpg', '没有一种生活是可惜的（继《活着》之后，余华再论人生与自我）（当当专享签章本，余华', '47.90', NULL),
 (3, 'img/carousel/qbs_w.jpg', 'img/carousel/qbs_lg.jpg', 'img/carousel/qbs_sm.jpg', '小人物：我和父亲乔布斯\r\n没有这本书，关于乔布斯的认识，你永远少了一块。', '48.90', NULL),
 (4, 'img/carousel/1998_w.jpg', 'img/carousel/1998_lg.jpg', 'img/carousel/1998_sm.jpg', '请回答1998（马云、马化腾、刘强东、章子怡、赵薇……还有我们的人生，早已在20年前埋下了伏笔）\r\n1998年，它是今天的开始，', '16.70', NULL);
@@ -277,15 +270,19 @@ INSERT INTO `book_laptop` (`lid`, `book_name`, `family_id`, `title`, `price`, `p
 (69, '别走得太快，等一等灵魂', NULL, NULL, '35.00', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 274, 274, NULL, NULL, NULL, 'img/laptop/70.jpg', 'img/laptop/70.jpg', NULL, '出版时间:2017年06月'),
 (70, '热爱生命', NULL, NULL, '39.70', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 0, 0, NULL, NULL, NULL, 'img/laptop/71.jpg', 'img/laptop/71.jpg', NULL, '出版时间:2019年06月'),
 (71, '我的世界观', NULL, NULL, '38.10', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 6530, 6530, NULL, '王后雄，小熊图书总主编。湖北省特级教师，中国化学教学专业委员会会员，黄冈市化学教学专业委员会副理事长，湖北省第九届人大代表。现任华中师范大学教授、博士生导师，从事大学教学与考试研究，《教材完全解读》主编。其主编的《教材完全解读》《高考完全解读》等图书，畅销二十年不衰，是中学生考前必拜的大神。', NULL, 'img/laptop/72.jpg', 'img/laptop/72.jpg', NULL, '出版时间:2017年04月'),
-(72, '方寸之间', NULL, NULL, '30.00', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 0, 0, NULL, NULL, NULL, 'img/laptop/73.jpg', 'img/laptop/73.jpg', NULL, '出版时间:2017年06月');
-INSERT INTO `book_laptop` (`lid`, `book_name`, `family_id`, `title`, `price`, `promise`, `author`, `publishing`, `comment_count`, `laptop_count`, `content_introduction`, `author_introduction`, `catalogue_introduction`, `lg_pic`, `sm_pic`, `inbetweening`, `shelf_time`) VALUES
+(72, '方寸之间', NULL, NULL, '30.00', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 0, 0, NULL, NULL, NULL, 'img/laptop/73.jpg', 'img/laptop/73.jpg', NULL, '出版时间:2017年06月'),
 (73, '人性的枷锁', NULL, NULL, '34.10', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 0, 0, NULL, NULL, NULL, 'img/laptop/74.jpg', 'img/laptop/74.jpg', NULL, '出版时间:2017年06月'),
-(74, '古文观止', NULL, NULL, '35.80', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 488, 488, NULL, NULL, NULL, 'img/laptop/75.jpg', 'img/laptop/75.jpg', NULL, '出版时间:2017年06月'),
+(74, '古文观止', NULL, NULL, '35.80', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 488, 488, NULL, NULL, NULL, 'img/laptop/75.jpg', 'img/laptop/75.jpg', NULL, '出版时间:2017年06月');
+INSERT INTO `book_laptop` (`lid`, `book_name`, `family_id`, `title`, `price`, `promise`, `author`, `publishing`, `comment_count`, `laptop_count`, `content_introduction`, `author_introduction`, `catalogue_introduction`, `lg_pic`, `sm_pic`, `inbetweening`, `shelf_time`) VALUES
 (75, '狮子王', NULL, '国家图书馆第十四届文津图书奖获奖作品。中科院专家由德文编译导读，完整收录爱因斯坦关于人生观世界观的文章，有20多篇初次译为中文；是爱因斯坦的自传，也是独特的科学史。杨振宁序；受清华师生欢迎的十本书之一', '55.10', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '阿尔伯特·爱因斯坦', '中信出版社', 9553, 9553, '我从未试图在任何场合取悦别人。     ——爱因斯坦  爱因斯坦不仅是天才和伟大的科学家，还是思想家和人道主义者、和平主义者。他不受羁绊的独立人格，以及看待问题和处理问题的独特方式使他思想深刻、见解独到。  阿尔伯特?爱因斯坦（Albert Einstein，1879—1955），被认为是有史以来*著名的科学家之一。他对物质结构、空间、时间以及引力性质的研究，彻底改变了这个世界，对人类思想进程产生了广泛而深远的影响。爱因斯坦不是一位仅专心自己专业领域，深居象牙塔的科学家，更是一位对人的天性了如指掌，对人间疾苦充满同情，为社会的各种不公正进行斗争的行动家。', '[美] 阿尔伯特?爱因斯坦（Albert Einstein）著 1879年3月14日出生于德意志帝国符腾堡王国乌尔姆市，1955年4月18日在美国新泽西州普林斯顿去世，被认为是科学史上最重要的理论物理学家之一。他对物质结构、空间和时间以及引力性质的研究，彻底改变了牛顿时代以来人们的世界观。他最为人知的是其质能等价公式E=mc2（被称为“世界上最著名的方程”）。因“对理论物理学的贡献，尤其是他发现了光电效应的规律”而获得1921年度诺贝尔物理学奖。爱因斯坦发表了300多篇科学论文以及150多篇非科学论文，留下了3万多封信件。他的智力成就和独创性使得“爱因斯坦”成为“天才”的代名词。爱因斯坦利用自己非凡的社会名望，致力于国际理解与和平。他称自己为和平主义者、社会主义者和犹太复国主义者。<div>\n<p>?</p>\n<p>?</p>\n<p>?</p>\n<p><b><span>[美]</span></b><b><span>?</span></b><b><span><span style=\"font-family: 宋体;\">阿尔伯特</span>?爱因斯坦（Albert Einstein）著</span></b><b><span>?</span></b></p>\n<p><span>1</span><span>879</span><span><span style=\"font-family: 宋体;\">年</span>3月14日出生</span><span><span style=\"font-family: 宋体;\">于德意志帝国符腾堡王国乌尔姆市，</span></span><span>1955年4月18日</span><span><span style=\"font-family: 宋体;\">在美国新泽西州普林斯顿去世，被认为是科学史上最重要的理论物理学家</span></span><span><span style=\"font-family: 宋体;\">之一</span></span><span><span style=\"font-family: 宋体;\">。他</span></span><span><span style=\"font-family: 宋体;\">对</span></span><span><span style=\"font-family: 宋体;\">物质结构', '代序 爱因斯坦：机遇与眼光  杨振宁编译前言他从未试图在任何场合取悦别人方在庆 第一部我的世界观我未来的计划 2我从未试图在任何场合取悦别人 4我的世界观 5论生命的意义 10一个人的真正价值 11论财富 12共同体与个人 13国家与个人良知 17善与恶 19<div>\n<p>?</p>\n<p>代\n序 爱因斯坦：机遇与眼光? 杨振宁</p>\n<p>编译前言\n他从未试图在任何场合取悦别人\n方在庆</p>\n<p>?</p>\n<p>第一部\n我的世界观</p>\n<p>我未来的计划 2</p>\n<p>我从未试图在任何场合取悦别人 4</p>\n<p>我的世界观 5</p>\n<p>论生命的意义 10</p>\n<p>一个人的真正价值 11</p>\n<p>论财富 12</p>\n<p>共同体与个人 13</p>\n<p>国家与个人良知 17</p>\n<p>善与恶 19</p>\n<p>宗教与科学 20</p>\n<p>科学研究的宗教情怀 25</p>\n<p>科学与宗教 26</p>\n<p>宗教与科学势不两立吗？ 35</p>\n<p>对宗教问题的回答 39</p>\n<p>失去的天堂 41</p>\n<p>伦理文化的必要性 42</p>\n<p>法西斯主义与科学—给罗马的罗科部长的一封信 44</p>\n<p>论自由 46</p>\n<p>在“\n罗德与泰勒奖”颁奖礼上的致辞 49</p>\n<p>人权 51</p>\n<p>论学术自由—关于“\n贡贝耳事件” 53</p>\n<p>现代宗教裁判法 56</p>\n<p>培养独立思考的教育 58</p>\n<p>教育与教育工作者 60</p>\n<p>教育与世界和平 61</p>\n<p>论教育 63</p>\n<p>论古典文学 69</p>\n<p>给日本小学生的信 70</p>\n<p>教师与学生—对一群儿童的讲话 71</p>\n<p>达沃斯的大学课程 72</p>\n<p>在H. A. 洛伦兹墓前的讲话 75</p>\n<p>H. A. 洛伦兹在国际合作事业中的活动 77</p>\n<p>创造者H. A. 洛伦兹及其为人 80</p>\n<p>提名尼尔斯?玻尔为物理学通讯院士的信 84</p>\n<p>评沃尔夫冈?泡利的《相对论》 86</p>\n<p>推荐保罗?赫兹 88</p>\n<p>约瑟夫?波普尔—林克尤斯 89</p>\n<p>祝贺阿诺尔德?柏林内尔70 岁生日 91</p>\n', 'img/laptop/76.jpg', 'img/laptop/76.jpg', 'http://img59.ddimg.cn/99999990015132619.jpg', '出版时间:2018年10月'),
 (76, '谁爱这不息的变幻', NULL, '用喜欢的方式读一生，人文社科好书每满100减40，点击进入促销会场！>>', '37.10', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '叶义言', '中国书籍出版社', 115, 115, NULL, NULL, '第一章 TW骨龄评分法和中国儿童骨龄评分法的历史一、TW系的创建史二、中国儿童骨龄评分法的创建历程第二章 TW骨龄评分法概述一、TW骨龄评分法的根源二、TW骨龄评分法的选骨三、TW骨龄评分法骨发育期及其赋分四、TW骨龄评分法骨龄标准五、TW成年身高预测六、TW女孩初潮年龄预测七、TW技术的培训和要求八、TW骨龄的临床应用第一章 TW骨龄评分法和中国儿童骨龄评分法的历史<br />一、TW系的创建史<br />二、中国儿童骨龄评分法的创建历程<br /><br />第二章 TW骨龄评分法概述<br />一、TW骨龄评分法的根源<br />二、TW骨龄评分法的选骨<br />三、TW骨龄评分法骨发育期及其赋分<br />四、TW骨龄评分法骨龄标准<br />五、TW成年身高预测<br />六、TW女孩初潮年龄预测<br />七、TW技术的培训和要求<br />八、TW骨龄的临床应用<br /><br />第三章 中国儿童骨龄评分法<br />一、TW-C拍摄技术<br />二、TW-C读片技术<br />三、TW-C分期技术<br />四、TW-C骨龄评定技术<br />五、TW-C骨龄的临床应用<br /><br />第四章 TW骨龄评分法临床应用案例分享<br />参考文献显示全部信息', 'img/laptop/77.jpg', 'img/laptop/77.jpg', NULL, '出版时间:2017年07月'),
 (77, '最美最美的古典诗词', NULL, NULL, '30.00', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 0, 0, NULL, NULL, NULL, 'img/laptop/78.jpg', 'img/laptop/78.jpg', NULL, '出版时间:2017年07月'),
 (78, '蒙田随笔', NULL, NULL, '29.00', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 0, 0, NULL, NULL, NULL, 'img/laptop/79.jpg', 'img/laptop/79.jpg', NULL, '出版时间:2017年07月'),
-(79, '夜莺与玫瑰', NULL, NULL, '33.30', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 0, 0, NULL, NULL, NULL, 'img/laptop/80.jpg', 'img/laptop/80.jpg', NULL, '出版时间:2017年07月');
+(79, '夜莺与玫瑰', NULL, NULL, '33.30', '由“当当”发货，并提供售后服务。 23:15前完成下单，预计明天(7月28日)可送达', '王后雄', '陕西师范大学出版社', 0, 0, NULL, NULL, NULL, 'img/laptop/80.jpg', 'img/laptop/80.jpg', NULL, '出版时间:2017年07月'),
+(80, '以喜欢的方式生活', NULL, '以自己喜欢的方式去生活', '34.50', NULL, '怀慈', NULL, 5476, 256, NULL, NULL, NULL, 'img/laptop/like_sm.jpg', 'img/laptop/like_sm.jpg', NULL, NULL),
+(81, '没有一种生活是可惜的', NULL, '没有一种生活是可惜的（继《活着》之后，余华再论人生与自我）（当当专享签章本，余华首部精装四色散文集）', '47.90', NULL, '余华', NULL, 121457, 1212, NULL, NULL, NULL, 'img/laptop/yuhua_sm.jpg', 'img/laptop/yuhua_sm.jpg', NULL, NULL),
+(82, '乔布斯', NULL, '我和我父亲，小人物', '48.90', NULL, '乔布斯', '四川文艺出版社', 425425, 4545, NULL, NULL, NULL, 'img/laptop/qbs_sm.jpg', 'img/laptop/qbs_sm.jpg', NULL, NULL),
+(83, '请回答1998', NULL, '请回答1998（马云、马化腾、刘强东、章子怡、赵薇……还有我们的人生，早已在20年前埋下了伏笔）\r\n1998年，它是今天的开始，', '16.70', NULL, '荣青', NULL, 7878, 545, NULL, NULL, NULL, 'img/laptop/1998_sm.jpg', 'img/laptop/1998_sm.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -363,6 +360,19 @@ CREATE TABLE `book_shoppingcart_item` (
   `is_checked` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- 转存表中的数据 `book_shoppingcart_item`
+--
+
+INSERT INTO `book_shoppingcart_item` (`iid`, `user_id`, `product_id`, `count`, `is_checked`) VALUES
+(18, 1, 16, 1, NULL),
+(19, 1, 2, 1, NULL),
+(20, 1, 9, 1, NULL),
+(22, 1, 80, 1, NULL),
+(23, 1, 83, 1, NULL),
+(24, 1, 81, 1, NULL),
+(25, 1, 82, 1, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -379,6 +389,13 @@ CREATE TABLE `book_user` (
   `user_name` varchar(32) DEFAULT NULL,
   `gender` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `book_user`
+--
+
+INSERT INTO `book_user` (`uid`, `uname`, `upwd`, `email`, `phone`, `avatar`, `user_name`, `gender`) VALUES
+(1, 'root', '123456', NULL, NULL, NULL, NULL, NULL);
 
 --
 -- 转储表的索引
@@ -481,7 +498,7 @@ ALTER TABLE `book_index_product`
 -- 使用表AUTO_INCREMENT `book_laptop`
 --
 ALTER TABLE `book_laptop`
-  MODIFY `lid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `lid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- 使用表AUTO_INCREMENT `book_laptop_family`
@@ -511,13 +528,13 @@ ALTER TABLE `book_receiver_address`
 -- 使用表AUTO_INCREMENT `book_shoppingcart_item`
 --
 ALTER TABLE `book_shoppingcart_item`
-  MODIFY `iid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `iid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- 使用表AUTO_INCREMENT `book_user`
 --
 ALTER TABLE `book_user`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- 限制导出的表

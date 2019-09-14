@@ -1,3 +1,44 @@
+//top_search
+var scrollTop=0;
+window.onscroll=function() {
+  scrollTop=document.body.scrollTop || document.documentElement.scrollTop ;
+  if(scrollTop>1200){
+    top_search.style.display="block"
+  }else{
+    top_search.style.display="none"
+  }
+  var toTop=document.getElementById("toTop");
+  var go=function (e){
+    e.preventDefault();
+    var dist=scrollTop;//总距离
+    var steps=50; //总步数
+    var dura=500; //总时间
+    var step=dist/steps; //每步的距离
+    var interval=dura/steps; //每步的时间 
+    var timer= setInterval(function(){      
+      window.scrollBy(0,-step);
+      steps--;
+      if(steps==0){
+        clearInterval(timer);
+        steps=50;
+      }
+    },interval)
+  }
+  toTop.onclick=go
+}
+function searchOf() {
+  var keyword=$("#search2").val();
+  window.open(`/cons.html?keyword=${keyword}`,"_self")
+}
+$("#search2").keydown(function(e){
+  if(e.keyCode==13){
+    var keyword=$(e.target).val();
+    window.open(`/cons.html?keyword=${keyword}`,"_self")
+  }
+})
+
+
+////
 let url ='/books/cquery?conditions=lid_count&num=80';
 axios.get(url).then((function (response) {
     let data = response.data;

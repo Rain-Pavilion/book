@@ -1,3 +1,103 @@
+/* right nav */
+#right_nav{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 34px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  z-index: 9999;
+  zoom: 1;
+  background: url(../img/index/bg_sidebar.png) repeat-y 0 0;
+}
+#right_nav a,#right_nav a:hover{
+  background-image: url(../img/index/nav.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 640px;
+    z-index: 999;
+    font: 12px/34px "Arial";
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 34px;
+    height: 34px;
+}
+#right_nav a span{
+  height: 34px;
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  margin-right: 0px;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+  background-color: #474747;
+	transition:all .5s;
+}
+#right_nav a:hover span{
+  margin-right: 34px;
+  width: 70px;
+}
+#right_nav a:first-child:hover{
+  background-position: -40px 0px;
+}
+#right_nav a:nth-child(2){
+  background-position: 0 -175px;
+}
+#right_nav a:nth-child(2):hover{
+  background-position: -40px -175px;
+}
+#right_nav a:nth-child(3){
+  background-position: 0 -245px;
+}
+#right_nav a:nth-child(3):hover{
+  background-position: -40px -245px;
+}
+#right_nav a:last-child{
+  background-position: 0 -210px;
+}
+#right_nav a:last-child:hover{
+  background-position: -40px -210px;
+}
+
+
+#top_search {
+  height: 52px;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  display: none;
+  background-color: rgba(229,27,41,0.9);
+}
+#top_search img{
+  float: left;
+  margin-left: 9%;
+}
+#top_search input{
+  float: left;
+  margin-top: 0.7%;
+  margin-left: 8%;
+  height: 32px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  background: #fff;
+  line-height: 32px;
+  border: 0;
+  width: 704px;
+  color: #666;
+}
+#top_search i{
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin-top: 0.7%;
+  margin-left: 0;
+  background: url(../img/index/home_sprite_1511.png) no-repeat 0 -250px;
+}
 .container-fluid{
   width: 1200px !important;
   margin: 0 auto;

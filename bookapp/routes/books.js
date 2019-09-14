@@ -11,6 +11,15 @@ router.get('/query', function (req, res, next) {
         res.send(result);
     })
 });
+// 分会场
+router.get("/carousel",(req,res)=>{
+    let cid = req.query.cid,
+    sql = "select * from book_index_carousel where cid=?";
+    pool.query(sql,[cid],function(err,result){
+        if (err) throw err;
+        res.send(result)
+    })
+})
 
 router.get('/cquery', function (req, res, next) {
     let {conditions, num} = req.query;

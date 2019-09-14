@@ -3,16 +3,14 @@
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            var result = JSON.parse(xhr.responseText)[0];
-            console.log(result);
-         
+            var result = JSON.parse(xhr.responseText)[0];         
             var detailLittle="";
             for(var i=0;i<5;i++){
                 detailLittle+=`<img src="${result.sm_pic}" data-target="${result.lg_pic}" class="my_small">`;
             $(".detail_little").html(detailLittle);
             }
-            $(".detail_left_big").html(`<img src="${result.lg_pic}"  class="my_big">`)
-
+            $(`<img src="${result.lg_pic}"  class="my_big">`).appendTo($(".detail_left_big"))
+            $("#bigimg ").html(`<img src="img/laptop/lg${result.lid}.jpg">`)
             $(".detail_center>h1").html(`<img src="img/detail/icon_ddzy.png" alt="">${result.book_name==null?"":result.book_name}`);
 
             $(".detail_center>h2>span").html(`${result.title==null?"":result.title}`);
@@ -29,7 +27,6 @@
         data:{num:17,conditions:"price"},
         dataType:"json",
         success:function(result){
-            console.log(result);
         var html="";
         for(var i=0;i<17;i++){
         html+=`<li>
@@ -95,7 +92,55 @@ $('.shopcar_link1').click(function (e) {
         alert(response.data.msg);
     })
   })
+////放大镜效果
+var cover = $("#cover");
+var left;
+var offtop;
+var canMove = false;
+$(cover).mouseleave(function () { 
+    $(".detail_left_big>img:eq(0)").css({
+        display:'none'
+    })
+    $("#bigimg").css({
+        display:'none'
+    })
+});
+$(cover).mousemove(function (e) { 
+    $(".detail_left_big img:eq(0)").css({
+        display:'block'
+    })
+    $("#bigimg").css({
+        display:'block'
+    })
+    // values: e.clientX, e.clientY, e.pageX, e.pageY
+    left = e.offsetX;
+    offtop = e.offsetY;
+    if(e.offsetX<80){
+        left = 80;
+    }
+    if(e.offsetX>240){
+        left = 240;
+    }
+    if(e.offsetY<80){
+        offtop = 80;
+    }
+    if(e.offsetY>240){
+        offtop = 240;
+    }
 
+    $(".detail_left_big img:eq(0)").css({
+        left:left+"px",
+        top:offtop+"px",
+        'margin-left': '-80px',
+        'margin-top': '-80px'
+    })
+    var lgleft = -left*2.5+80*2.5;
+    var lgtop = -offtop*2.5+80*2.5;
+    $("#bigimg img").css({
+        left:lgleft+"px",
+        top:lgtop+"px"
+    })
+});
 
 
 
