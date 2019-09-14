@@ -1,3 +1,36 @@
+.detail_left_big {
+    position: relative;
+}
+#bigimg {
+    position: absolute;
+    display: none;
+    left: 320px;
+    width: 400px;
+    height: 400px;
+    z-index: 999;
+    overflow: hidden;
+}
+#bigimg img {
+    position: absolute;
+    left: -100px;
+    top: -100px;
+}
+#cover {
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    z-index: 99;
+    cursor:move;
+}
+.detail_left_big img {
+    position: absolute;
+}
+.detail_left_big>img:first-child {
+    width: 160px;
+    height: 160px;
+    z-index: 9;
+    display: none;
+}
 .clearFloat:after{
     content:"";
     display:block;
@@ -57,7 +90,7 @@ li{
     height: 320px;
   
 }
-.detail_left_big img{
+.detail_left_big>img{
 width: 320px;
 }
  .detail_left .detail_little{
