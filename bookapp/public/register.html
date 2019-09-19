@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <!-- 头部开始了 -->
+    <div class="header clearFloat">
+        <img src="img/sprite/DDlogoNEW.gif" alt="">
+        <div class="ul_son">
+            <ul>
+                <li>
+                    <img src="img/register/2019-09-13_153242.png" alt="">
+                    <a href="#">购物车</a>
+                </li>
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的当当</a></li>
+                <li><a href="#">礼品卡</a></li>
+                <li><a href="#">手机当当</a></li>
+                <li><a href="#">企业销售</a></li>
+                <li><a href="#">帮助</a></li>
+            </ul>
+        </div>
+        <span>欢迎光临当当网,请<a href="#">登录</a> <a href="#">免费注册</a></span>
+    </div>
+    <!-- 头部结束了 -->
+    <!-- 身体开始了 -->
+    <div class="body clearFloat">
+        <div class="content"></div>
+     <div class="body_header">
+         <div class="body1"></div>
+         <div class="body2">新用户注册</div>
+         <div class="body3">企业用户注册</div>
+         <div class="body4">
+         <div class="body4_son">
+             <span>当当首页</span>
+             <span>注册帮助</span>
+         </div>   
+         </div>   
+     </div>
+     <div class="body_body">
+    <div class="body_body_first">
+        <img src="img/register/warn.png" alt="">
+    </div>
+    <div class="body_body_two clearFloat">
+       <ul>
+           <li>手机号码 <input type="text" placeholder="请输入您的手机号码"></li>
+           <li>登录密码 <input type="password"></li>
+           <li>确认密码 <input type="password"></li>
+           <li>验证码 <input type="text" placeholder="请输入验证码">
+            <div class="li_last">xyzw</div><span id="huantu">换张图</span>
+        </li>
+       </ul> 
+       <span><input type="checkbox">我已阅读并同意<a href="">&lt;&lt;当当交易条款&gt;&gt;</a>和<a href="">&lt;&lt;当当社区条款&gt;&gt;</a></span>
+       <img src="img/register/anniu.png" alt="">
+    </div>
+     </div>
+    </div>
+    <!-- 身体结束了 -->
+    <script>
+    var huantu=document.getElementById("huantu");
+    var li_last=document.getElementsByClassName("li_last")[0];
+    //var arr=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
+    
+    huantu.onclick=function(){
+        var arr=["你","好","吗"];
+        for(var i=0;i<3;i++){
+     var num=Math.floor(Math.random())*3;
+     //将值赋给li_last的内容
+    }
+    li_last.innerHTML="arr1";
+    }
+    </script>
+</body>
+</html>
