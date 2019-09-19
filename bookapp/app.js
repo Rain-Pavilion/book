@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 var booksRouter=require('./routes/books');
 var cartRouter=require('./routes/cart');
 var session=require('express-session');
-
+const cors = require("cors");
 var app = express();
 
 
@@ -27,6 +27,13 @@ app.use(session({
     }
 ));
 // view engine setup
+// app.use(cors({
+//     origin: ["http://127.0.0.1:8000", "http://localhost:4000"],
+//     credentials: true
+// }));
+
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

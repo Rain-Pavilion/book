@@ -1,0 +1,251 @@
+.dingdang_main {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.dingdang_main .left-area {
+    text-align: center;
+    width: 198px;
+}
+
+.dingdang_main .title {
+    height: 62px;
+    line-height: 62px;
+    border: solid 1px #dcdcdc;
+    width: 198px;
+    display: inline-block;
+    color: #323232;
+}
+
+
+.dingdang_main .info-list {
+    border-right: solid 1px #dcdcdc;
+    border-left: solid 1px #dcdcdc;
+    border-bottom: solid 1px #dcdcdc;
+    width: 190px;
+    display: inline-block;
+}
+
+.dingdang_main .info-list ul:first-child {
+    margin-top: 32px;
+}
+
+.dingdang_main .info-list ul {
+    color: #646464;
+    font-size: 15px;
+}
+
+.dingdang_main .info-list li {
+    margin-top: 20px;
+    color: #969696;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.dingdang_main .right-area {
+    width: 988px;
+    height: 900px;
+    margin-left: 14px;
+}
+
+
+.dingdang_main .info-header {
+    display: flex;
+    height: 42px;
+}
+
+.dingdang_main .info-header .left {
+    line-height: 42px;
+    padding: 0 20px;
+    width: 92px;
+    border-bottom: solid 1px #f01923;
+    margin-right: 10px;
+}
+
+.dingdang_main .info-header .right {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #646464;
+    flex: auto;
+    line-height: 42px;
+}
+
+.dingdang_main .info-header .right .select div {
+    padding: 0 20px;
+}
+
+.dingdang_main .info-header .right .select {
+    display: flex;
+
+}
+
+.dingdang_main .info-header .input {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    height: 37px;
+}
+
+
+.dingdang_main .info-header .input input {
+
+    outline: none;
+    width: 327px;
+    height: 35px;
+    box-sizing: border-box;
+}
+
+.dingdang_main .info-header .input button {
+    display: inline-block;
+    outline: none;
+    background: #f3f4f5;
+    border:solid 1px #dcdcdc;
+    border-left: none;
+    height: 35px;
+}
+
+
+.dingdang_main .dingdang_header {
+    display: flex;
+    background: #f3f4f5;
+    height: 36px;
+    line-height: 36px;
+    color: #646464;
+}
+
+.dingdang_header .dingdang_detail{
+    width: 688px;
+    text-align: center;
+}
+
+.dingdang_header .dingdang_status{
+    width: 100px;
+    text-align: center;
+}
+
+.dingdang_header .dingdang_opreation{
+    width: 200px;
+    text-align: center;
+}
+
+
+.dingdang_options {
+    height: 44px;
+    padding: 10px 0 0 0;
+    box-sizing:border-box;
+}
+
+.dingdang_options .all{
+    background-color:#d2d2d2;
+    color: #ffffff;
+    padding: 5px  15px;
+    display: inline-block;
+    border-radius:4px;
+}
+
+.dingdang_options .check {
+    display: inline-block;
+}
+
+.dingdang_options .num {
+    float: right;
+    width: 26px;
+    height: 26px;
+    background: #fb3433;
+    color: #ffffff;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 26px;
+    margin-right: 10px;
+}
+
+.dingdang_list .dingdang_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dingdang_list .dingdang_item_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 36px;
+    line-height: 36px;
+    background-color: #eff3ff;
+    align-items: center;
+}
+
+.dingdang_item_header .left {
+    display: flex;
+    align-items: center;
+}
+
+.dingdang_item_header .right{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.dingdang_list .dingdang_item_main {
+    height: 160px;
+}
+
+
+.dingdang_list .dingdang_item_body{
+    color: #646464;
+}
+
+.dingdang_list .dingdang_item_body img{
+    padding: 5px;
+    border: solid #dcdcdc 1px;
+    width: 74px;
+    height: 74px;
+}
+
+.dingdang_list .dingdang_item_main .button{
+    background: #FF2832;
+    color: #fafafa;
+    border:solid #FF2832 1px;
+    width: 75px;
+    text-align: center;
+    line-height: 24px;
+    height: 26px;
+    border-radius: 4px;
+    outline: none;
+}
+
+
+.dingdang_item_main .m10{
+    margin-bottom: 10px;
+}
+
+.dingdang_item_main .m7{
+    margin-bottom: 7px;
+}
+
+.dingdang_item_main .mr82{
+    margin-right: 82px;
+}
+
+.dingdang_list .dingdang_item_body {
+    display: flex;
+    border: solid 1px #dcdcdc;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 20px;
+}
+
+.dingdang_list .dingdang_item_body .right {
+    display: flex;
+}
+
+
+
+
+
+
+
+.count{
+    color: #f01923;
+}
