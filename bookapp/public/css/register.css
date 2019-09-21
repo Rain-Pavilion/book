@@ -26,7 +26,7 @@ body{
 }
 /* 头部开始了 */
 .header{
-    width: 1200px;
+    width: 1000px;
     border-bottom:3px solid #F07700;
     margin:0 auto;
     background-color: #fff;
@@ -44,6 +44,7 @@ body{
 .ul_son ul li a{
     color:black;
 }
+
 .ul_son ul li:not(:last-child){
     border-right:1px solid gray;
 }
@@ -60,11 +61,13 @@ body{
 
 /* 身体开始了 */
 .body{
-    width: 1200px;
+    width: 1000px;
     margin:0 auto;
     margin-top:20px;
     position:relative;
   background-color: #fff;
+  box-shadow: -10px 10px #EBEEEF;
+  padding-bottom:40px;
 }
 .content{
     height: 1px;
@@ -101,7 +104,7 @@ margin-top:20px;
     margin-left:10px;
 }
 .body .body_header .body4{
-    width: 900px;
+    width: 706px;
     height: 40px;
     border-bottom:1px solid gray;
 }
@@ -119,12 +122,12 @@ margin-top:20px;
 .body_body_first img{
     width: 606px;
     margin-top:10px;
-    margin-left:304px;
+    margin-left:220px;
     margin-bottom:20px;
 }
 .body_body_two {
     width: 405px;
-   margin-left:400px;
+   margin-left:290px;
 }
 .body_body_two li input{
     width: 300px;
@@ -161,3 +164,58 @@ margin-left:77px;
     margin-top:30px;
 }
 /* 身体结束了 */
+
+/* 尾部开始了 */
+.foot-first{
+    border:1px solid #EBEBEB;
+    margin-top:70px;
+}
+.foot-two ul li{
+float:left;
+padding:0 20px 0 20px;
+}
+.foot-two ul{
+    margin-top:50px;
+}
+.foot-two ul li:not(:last-child){
+    border-right:1px solid #8C8C8C; 
+}
+.foot-two ul li:first-child{
+    margin-left:320px;
+}
+.foot-two ul li a{
+    font-size:12px;
+    color:#8C8C8C;
+}
+.foot-three span{
+    font-size:10px;
+    color:#8C8C8C;
+    margin-left:465px;
+}
+.foot-three{
+    margin-top:20px;
+}
+.foot-center{
+    width: 960px;
+    margin:0 auto;
+    padding-bottom:40px;
+}
+.foot-center .img{
+    display:inline-block;
+   margin-left:122px;
+   margin-top:20px;
+}
+.foot-center .img2{
+    display:inline-block;
+    margin-left:262px;
+    margin-top:20px;
+}
+.insert{
+    display:inline-block;
+    width: 10px;
+    border-top:1px solid black;
+    position: absolute;
+    top:61px;
+    left:162px;
+}
+/* 尾部结束了 */
