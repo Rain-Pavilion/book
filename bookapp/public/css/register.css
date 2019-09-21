@@ -32,22 +32,49 @@ body{
     background-color: #fff;
     position:relative;
 }
-.ul_son{
-    float:right;
-}
-.ul_son ul li{
+/* 上面导航栏 */
+/* .ul_son{ */
+    /* float:right; */
+/* } */
+/* .ul_son ul li{ */
+    /* float:left; */
+    /* font-size:12px; */
+    /* height: 16px; */
+    /* margin:0 5px 0 5px;  */
+/* } */
+/* .ul_son ul li a{ */
+    /* color:black; */
+/* } */
+/*  */
+/* .ul_son ul li:not(:last-child){ */
+    /* border-right:1px solid gray; */
+/* } */
+.ul_son ul>li{
     float:left;
     font-size:12px;
-    height: 16px;
-    margin:0 3px 0 3px; 
+    font-weight:lighter;
+    padding:0 8px 0 8px;
 }
+.ul_son{
+    position: absolute;
+    top:0;
+    right:0;
+}
+.ul_son ul li:not(:last-child){
+    border-right:1px solid #BCBCBC;
+}
+
 .ul_son ul li a{
     color:black;
 }
-
-.ul_son ul li:not(:last-child){
-    border-right:1px solid gray;
+.ul_son ul li a:hover{
+    color:#F07700;
 }
+
+.ul_son{
+    display:inline-block;
+}
+/* 上面导航栏 */
 .header span{
     font-size:12px;
     position:absolute;
@@ -56,6 +83,28 @@ body{
 }
 .header span a{
     color:#206AB5;
+}
+
+#dd{
+    border:1px solid #F07700;
+    position: absolute;
+    opacity: 0;
+    top:0;
+    right:227px;
+    z-index:1;
+    background-color: white;
+    font-size:13px;
+    
+}
+#dd li:first-child{
+    padding-bottom:3px;
+    color:#F07700;
+}
+#dd li:not(:first-child){
+    padding-bottom:3px;
+}
+#dd li{
+    border-bottom:1px solid #BCBCBC;
 }
 /* 头部结束了 */
 
