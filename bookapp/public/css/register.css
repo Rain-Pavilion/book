@@ -82,31 +82,32 @@ margin-top:20px;
 .body .body_header .body1{
     height: 40px;
     width: 40px;
-    border-bottom:1px solid gray;
+    border-bottom:1px solid #ECEEF2;
 }
 .body .body_header .body2{
     height: 40px;
     width: 120px;
-    border-top:1px solid gray;
-    border-left:1px solid gray;
-    border-right:1px solid gray;
+    border-top:1px solid #ECEEF2;
+    border-left:1px solid #ECEEF2;
+    border-right:1px solid #ECEEF2;
     text-align:center;
     line-height:40px;
 }
 .body .body_header .body3{
     height: 40px;
     width: 120px;
-    border-top:1px solid gray;
-    border-left:1px solid gray;
-    border-right:1px solid gray;
+    border-top:1px solid #ECEEF2;
+    border-left:1px solid #ECEEF2;
+    border-right:1px solid #ECEEF2;
     text-align:center;
     line-height:40px;
     margin-left:10px;
+    background-color: #F5F5F5;
 }
 .body .body_header .body4{
     width: 706px;
     height: 40px;
-    border-bottom:1px solid gray;
+    border-bottom:1px solid #ECEEF2;
 }
 .body .body_header .body4_son{
     float:right;
@@ -213,9 +214,16 @@ padding:0 20px 0 20px;
 .insert{
     display:inline-block;
     width: 10px;
-    border-top:1px solid black;
+    border-top:1px solid #ECEEF2;
     position: absolute;
     top:61px;
     left:162px;
+}
+.trem{
+    font-size:12px;
+    color:#787878;
+    position: absolute;
+    top:154px;
+    left:378px;
 }
 /* 尾部结束了 */
