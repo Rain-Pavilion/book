@@ -88,7 +88,7 @@ body{
 #dd{
     border:1px solid #F07700;
     position: absolute;
-    opacity: 0;
+    opacity:0;
     top:0;
     right:227px;
     z-index:1;
