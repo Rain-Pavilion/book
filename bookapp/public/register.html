@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/register.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
     <!-- 头部开始了 -->
@@ -73,8 +74,8 @@
     </div>
     <div class="body_body_two clearFloat">
        <ul>
-           <li>手机号码 <input type="text" placeholder="请输入您的手机号码"></li>
-           <li>登录密码 <input type="password"></li>
+           <li >手机号码 <input id="body_body_li" type="text" placeholder="请输入您的手机号码"><span id="body_body_span1" style="display:none">请输入正确手机号</span></li>
+           <li>登录密码 <input id="body_body_li2" type="password"><span id="body_body_span2" style="display:none">纯数字十一位密码</span></li>
            <li>确认密码 <input type="password"></li>
            <li>验证码 <input type="text" placeholder="请输入验证码">
             <div class="li_last">xyzw</div><span id="huantu">换张图</span>
@@ -119,7 +120,33 @@
 
     
     <script>
-   
+        var str=/^1[1-9]{10}$/
+   var input=document.getElementById("body_body_li");
+   var span=document.getElementById("body_body_span1")
+   input.onfocus=function(){
+   if(input.value.search(str)==-1){
+   span.style.display="inline-block";
+   }
+}
+input.onblur=function(){
+    if(input.value.search(str)!=-1){
+        span.style.display="none";
+    }
+}
+var str1=/^[1-9]{11}$/
+var input2=document.getElementById("body_body_li2");
+var span2=document.getElementById("body_body_span2");
+input2.onfocus=function(){
+   if(input2.value.search(str1)==-1){
+   span2.style.display="inline-block";
+   }
+}
+input2.onblur=function(){
+    if(input2.value.search(str1)!=-1){
+        span2.style.display="none";
+    }
+}
+
     </script>
 </body>
 </html>
